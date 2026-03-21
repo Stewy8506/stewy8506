@@ -53,3 +53,4 @@
 - 🪖 Smart Helmet System — ESP32-based smart helmet with Bluetooth audio, noise cancellation & rider safety features  
 - 📱 Smart Helmet App — Flutter-based companion app for control, monitoring & real-time data visualization  
 - 🧠 AI-Powered Healthcare Assistant — ML-driven system for health monitoring, predictions & personalized insights  
+- ⚡ Smart Energy Management System — Web-based dashboard for monitoring, analytics & optimization of energy usage  
