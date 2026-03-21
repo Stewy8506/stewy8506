@@ -5,8 +5,8 @@
 
 ## 🌐 Socials:
 
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram)]([YOUR_LINK](https://www.instagram.com/anv.vibes/))
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)]([YOUR_LINK](https://www.linkedin.com/in/anv-dev/))
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram)]((https://www.instagram.com/anv.vibes/))
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)]((https://www.linkedin.com/in/anv-dev/))
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail)](mailto:dasanuvab38@gmail.com)
 
 
