@@ -14,6 +14,7 @@
 
 <br/>
 
+<div align="center">
 <table width="100%"><tr>
 <td width="50%" valign="top">
 
@@ -35,6 +36,8 @@ focus:
 
 </td>
 <td width="50%" valign="top">
+</div>
+
 
 ```text
 # skill_distribution.log
