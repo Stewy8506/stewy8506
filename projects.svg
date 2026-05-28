@@ -1,0 +1,133 @@
+<svg width="800" height="380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .card { fill: #0d0d0d; rx: 8; }
+      .border { fill: none; stroke: #1f2937; stroke-width: 1; }
+      .title { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; fill: #ffffff; }
+      .stack { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #3B82F6; }
+      .desc { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #6b7280; }
+      .label { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #9ca3af; }
+      .section { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #3B82F6; }
+      .dot { fill: #3B82F6; }
+
+      /* card 1 */
+      .c1 { animation: fadeUp 0.6s ease forwards; opacity: 0; animation-delay: 0.1s; }
+      /* card 2 */
+      .c2 { animation: fadeUp 0.6s ease forwards; opacity: 0; animation-delay: 0.35s; }
+      /* card 3 */
+      .c3 { animation: fadeUp 0.6s ease forwards; opacity: 0; animation-delay: 0.6s; }
+      /* card 4 */
+      .c4 { animation: fadeUp 0.6s ease forwards; opacity: 0; animation-delay: 0.85s; }
+      /* header */
+      .hdr { animation: fadeDown 0.5s ease forwards; opacity: 0; animation-delay: 0s; }
+
+      /* bar fills */
+      .bar-fill { animation: growBar 1.2s cubic-bezier(0.4,0,0.2,1) forwards; }
+      .b1 { animation-delay: 1.2s; }
+      .b2 { animation-delay: 1.35s; }
+      .b3 { animation-delay: 1.5s; }
+      .b4 { animation-delay: 1.65s; }
+      .b5 { animation-delay: 1.8s; }
+
+      /* blue pulse on dots */
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(14px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeDown {
+        from { opacity: 0; transform: translateY(-8px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes growBar {
+        from { width: 0; }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+      }
+      @keyframes shimmer {
+        0% { stroke-dashoffset: 600; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .border-anim {
+        stroke-dasharray: 600;
+        stroke-dashoffset: 600;
+        animation: shimmer 1.5s ease forwards;
+      }
+      .ba1 { animation-delay: 0.1s; }
+      .ba2 { animation-delay: 0.35s; }
+      .ba3 { animation-delay: 0.6s; }
+      .ba4 { animation-delay: 0.85s; }
+    </style>
+  </defs>
+
+  <!-- bg -->
+  <rect width="800" height="380" fill="#080808"/>
+
+  <!-- section label -->
+  <g class="hdr">
+    <text x="24" y="28" class="section">~/projects</text>
+    <line x1="24" y1="36" x2="776" y2="36" stroke="#1f2937" stroke-width="0.5"/>
+  </g>
+
+  <!-- CARD 1: Smart Helmet System -->
+  <g class="c1">
+    <rect x="16" y="48" width="372" height="140" rx="8" fill="#0d0d0d"/>
+    <rect x="16" y="48" width="372" height="140" rx="8" fill="none" stroke="#1f2937" stroke-width="1" class="border-anim ba1"/>
+    <circle cx="36" cy="72" r="5" class="dot pulse"/>
+    <text x="50" y="76" class="title">Smart Helmet System</text>
+    <text x="36" y="96" class="stack">ESP32  ·  C++  ·  BLE  ·  KiCad</text>
+    <text x="36" y="115" class="desc">Bluetooth audio, noise cancellation</text>
+    <text x="36" y="130" class="desc">&amp; rider safety on a microcontroller.</text>
+    <text x="36" y="152" class="label">Hardware  ·  Firmware  ·  PCB</text>
+    <line x1="36" y1="162" x2="372" y2="162" stroke="#1f2937" stroke-width="0.5"/>
+    <text x="36" y="177" class="stack" style="font-size:9px;">⬡ embedded · iot · safety</text>
+  </g>
+
+  <!-- CARD 2: Smart Helmet App -->
+  <g class="c2">
+    <rect x="412" y="48" width="372" height="140" rx="8" fill="#0d0d0d"/>
+    <rect x="412" y="48" width="372" height="140" rx="8" fill="none" stroke="#1f2937" stroke-width="1" class="border-anim ba2"/>
+    <circle cx="432" cy="72" r="5" class="dot pulse"/>
+    <text x="446" y="76" class="title">Smart Helmet App</text>
+    <text x="432" y="96" class="stack">Flutter  ·  Dart  ·  BLE  ·  Firebase</text>
+    <text x="432" y="115" class="desc">Real-time monitoring, wireless control</text>
+    <text x="432" y="130" class="desc">&amp; live data visualization.</text>
+    <text x="432" y="152" class="label">Mobile  ·  Cross-platform  ·  BLE</text>
+    <line x1="432" y1="162" x2="768" y2="162" stroke="#1f2937" stroke-width="0.5"/>
+    <text x="432" y="177" class="stack" style="font-size:9px;">⬡ flutter · mobile · companion</text>
+  </g>
+
+  <!-- CARD 3: AI Healthcare -->
+  <g class="c3">
+    <rect x="16" y="204" width="372" height="140" rx="8" fill="#0d0d0d"/>
+    <rect x="16" y="204" width="372" height="140" rx="8" fill="none" stroke="#1f2937" stroke-width="1" class="border-anim ba3"/>
+    <circle cx="36" cy="228" r="5" class="dot pulse"/>
+    <text x="50" y="232" class="title">AI Healthcare Assistant</text>
+    <text x="36" y="252" class="stack">Python  ·  ML  ·  Firebase  ·  GCP</text>
+    <text x="36" y="271" class="desc">ML-driven health predictions,</text>
+    <text x="36" y="286" class="desc">monitoring &amp; personalized insights.</text>
+    <text x="36" y="308" class="label">ML  ·  Cloud  ·  Health-tech</text>
+    <line x1="36" y1="318" x2="372" y2="318" stroke="#1f2937" stroke-width="0.5"/>
+    <text x="36" y="333" class="stack" style="font-size:9px;">⬡ ai · ml · healthcare</text>
+  </g>
+
+  <!-- CARD 4: Energy Dashboard -->
+  <g class="c4">
+    <rect x="412" y="204" width="372" height="140" rx="8" fill="#0d0d0d"/>
+    <rect x="412" y="204" width="372" height="140" rx="8" fill="none" stroke="#1f2937" stroke-width="1" class="border-anim ba4"/>
+    <circle cx="432" cy="228" r="5" class="dot pulse"/>
+    <text x="446" y="232" class="title">Smart Energy Dashboard</text>
+    <text x="432" y="252" class="stack">React  ·  Node.js  ·  GCP  ·  SQL</text>
+    <text x="432" y="271" class="desc">Web dashboard for real-time energy</text>
+    <text x="432" y="286" class="desc">monitoring &amp; usage optimization.</text>
+    <text x="432" y="308" class="label">Web  ·  Cloud  ·  Analytics</text>
+    <line x1="432" y1="318" x2="768" y2="318" stroke="#1f2937" stroke-width="0.5"/>
+    <text x="432" y="333" class="stack" style="font-size:9px;">⬡ react · iot · analytics</text>
+  </g>
+
+  <!-- bottom label -->
+  <text x="400" y="368" class="section" text-anchor="middle" style="font-size:9px; fill:#374151;">4 projects · hardware · software · cloud</text>
+</svg>

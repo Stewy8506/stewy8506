@@ -1,0 +1,20 @@
+<svg width="800" height="48" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes slide {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .ticker { animation: slide 18s linear infinite; }
+      text { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #3B82F6; }
+    </style>
+  </defs>
+  <rect width="800" height="48" fill="#080808"/>
+  <line x1="0" y1="0" x2="800" y2="0" stroke="#1f2937" stroke-width="0.5"/>
+  <clipPath id="clip"><rect width="800" height="48"/></clipPath>
+  <g clip-path="url(#clip)">
+    <g class="ticker">
+      <text y="28">· anuvab das · kolkata, india · iot engineer · robotics · full-stack · esp32 · ros · flutter · react · building real things · open to collabs · anuvab das · kolkata, india · iot engineer · robotics · full-stack · esp32 · ros · flutter · react · building real things · open to collabs ·</text>
+    </g>
+  </g>
+</svg>
