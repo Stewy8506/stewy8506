@@ -49,7 +49,7 @@ focus:
 [PCB Design ] ████░░░░░░░░░░  28% hardware
 [ROS        ] ███░░░░░░░░░░░  22% robotics
 
-> 4 shipped projects
+> 10+ shipped projects
 > hardware + software
 ```
 
