@@ -1,0 +1,86 @@
+<svg width="100%" viewBox="0 0 860 180" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+    .sl{font-family:'JetBrains Mono',monospace;font-size:9px;fill:#9ca3af}
+    .sh{font-family:'JetBrains Mono',monospace;font-size:8px;fill:#3B82F6;letter-spacing:1px}
+    .pill{fill:#080d14;stroke:#1e3a5f;stroke-width:0.5;rx:3}
+    .pill-hot{fill:#080d14;stroke:#3B82F6;stroke-width:0.8;rx:3}
+    .dot-s{fill:#3B82F6}
+    .dot-d{fill:#1e3a5f}
+    .p1{animation:pi 0.4s ease forwards;opacity:0}
+    .p2{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.05s}
+    .p3{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.1s}
+    .p4{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.15s}
+    .p5{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.2s}
+    .p6{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.25s}
+    .p7{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.3s}
+    .p8{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.35s}
+    .p9{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.4s}
+    .p10{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.45s}
+    .p11{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.5s}
+    .p12{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.55s}
+    .p13{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.6s}
+    .p14{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.65s}
+    .p15{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.7s}
+    .p16{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.75s}
+    .p17{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.8s}
+    .p18{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.85s}
+    .p19{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.9s}
+    .p20{animation:pi 0.4s ease forwards;opacity:0;animation-delay:0.95s}
+    .p21{animation:pi 0.4s ease forwards;opacity:0;animation-delay:1.0s}
+    .p22{animation:pi 0.4s ease forwards;opacity:0;animation-delay:1.05s}
+    .p23{animation:pi 0.4s ease forwards;opacity:0;animation-delay:1.1s}
+    .p24{animation:pi 0.4s ease forwards;opacity:0;animation-delay:1.15s}
+    @keyframes pi{from{opacity:0;transform:scale(0.7)}to{opacity:1;transform:scale(1)}}
+  </style>
+</defs>
+<rect width="860" height="180" fill="#060a10"/>
+<text x="20" y="22" font-family="JetBrains Mono,monospace" font-size="9" fill="#3B82F6" letter-spacing="3">~/STACK</text>
+<line x1="20" y1="30" x2="840" y2="30" stroke="#1e3a5f" stroke-width="0.5"/>
+
+<!-- Row 1 label -->
+<text x="20" y="52" class="sh">EMBEDDED</text>
+<!-- Row 1 pills -->
+<g class="p1"><rect x="100" y="40" width="62" height="20" rx="3" class="pill-hot"/><circle cx="110" cy="50" r="2.5" class="dot-s"/><text x="117" y="54" class="sl">ESP32</text></g>
+<g class="p2"><rect x="170" y="40" width="72" height="20" rx="3" class="pill"/><circle cx="180" cy="50" r="2.5" class="dot-d"/><text x="187" y="54" class="sl">Arduino</text></g>
+<g class="p3"><rect x="250" y="40" width="52" height="20" rx="3" class="pill"/><circle cx="260" cy="50" r="2.5" class="dot-d"/><text x="267" y="54" class="sl">ROS</text></g>
+<g class="p4"><rect x="310" y="40" width="68" height="20" rx="3" class="pill"/><circle cx="320" cy="50" r="2.5" class="dot-d"/><text x="327" y="54" class="sl">KiCad</text></g>
+<g class="p5"><rect x="386" y="40" width="86" height="20" rx="3" class="pill"/><circle cx="396" cy="50" r="2.5" class="dot-d"/><text x="403" y="54" class="sl">FreeRTOS</text></g>
+<g class="p6"><rect x="480" y="40" width="68" height="20" rx="3" class="pill"/><circle cx="490" cy="50" r="2.5" class="dot-d"/><text x="497" y="54" class="sl">ESP-IDF</text></g>
+
+<!-- Row 2 -->
+<text x="20" y="86" class="sh">FRONTEND</text>
+<g class="p7"><rect x="100" y="74" width="58" height="20" rx="3" class="pill-hot"/><circle cx="110" cy="84" r="2.5" class="dot-s"/><text x="117" y="88" class="sl">React</text></g>
+<g class="p8"><rect x="166" y="74" width="68" height="20" rx="3" class="pill"/><circle cx="176" cy="84" r="2.5" class="dot-d"/><text x="183" y="88" class="sl">Next.js</text></g>
+<g class="p9"><rect x="242" y="74" width="66" height="20" rx="3" class="pill"/><circle cx="252" cy="84" r="2.5" class="dot-d"/><text x="259" y="88" class="sl">Flutter</text></g>
+<g class="p10"><rect x="316" y="74" width="100" height="20" rx="3" class="pill"/><circle cx="326" cy="84" r="2.5" class="dot-d"/><text x="333" y="88" class="sl">React Native</text></g>
+<g class="p11"><rect x="424" y="74" width="62" height="20" rx="3" class="pill"/><circle cx="434" cy="84" r="2.5" class="dot-d"/><text x="441" y="88" class="sl">Figma</text></g>
+<g class="p12"><rect x="494" y="74" width="54" height="20" rx="3" class="pill"/><circle cx="504" cy="84" r="2.5" class="dot-d"/><text x="511" y="88" class="sl">CSS3</text></g>
+
+<!-- Row 3 -->
+<text x="20" y="120" class="sh">BACKEND</text>
+<g class="p13"><rect x="100" y="108" width="68" height="20" rx="3" class="pill-hot"/><circle cx="110" cy="118" r="2.5" class="dot-s"/><text x="117" y="122" class="sl">Node.js</text></g>
+<g class="p14"><rect x="176" y="108" width="70" height="20" rx="3" class="pill"/><circle cx="186" cy="118" r="2.5" class="dot-d"/><text x="193" y="122" class="sl">Firebase</text></g>
+<g class="p15"><rect x="254" y="108" width="74" height="20" rx="3" class="pill"/><circle cx="264" cy="118" r="2.5" class="dot-d"/><text x="271" y="122" class="sl">Supabase</text></g>
+<g class="p16"><rect x="336" y="108" width="44" height="20" rx="3" class="pill"/><circle cx="346" cy="118" r="2.5" class="dot-d"/><text x="353" y="122" class="sl">SQL</text></g>
+<g class="p17"><rect x="388" y="108" width="46" height="20" rx="3" class="pill"/><circle cx="398" cy="118" r="2.5" class="dot-d"/><text x="405" y="122" class="sl">GCP</text></g>
+<g class="p18"><rect x="442" y="108" width="66" height="20" rx="3" class="pill"/><circle cx="452" cy="118" r="2.5" class="dot-d"/><text x="459" y="122" class="sl">Docker</text></g>
+
+<!-- Row 4 -->
+<text x="20" y="154" class="sh">LANGUAGES</text>
+<g class="p19"><rect x="100" y="142" width="34" height="20" rx="3" class="pill-hot"/><circle cx="110" cy="152" r="2.5" class="dot-s"/><text x="117" y="156" class="sl">C</text></g>
+<g class="p20"><rect x="142" y="142" width="40" height="20" rx="3" class="pill"/><circle cx="152" cy="152" r="2.5" class="dot-d"/><text x="159" y="156" class="sl">C++</text></g>
+<g class="p21"><rect x="190" y="142" width="66" height="20" rx="3" class="pill"/><circle cx="200" cy="152" r="2.5" class="dot-d"/><text x="207" y="156" class="sl">Python</text></g>
+<g class="p22"><rect x="264" y="142" width="46" height="20" rx="3" class="pill"/><circle cx="274" cy="152" r="2.5" class="dot-d"/><text x="281" y="156" class="sl">Java</text></g>
+<g class="p23"><rect x="318" y="142" width="46" height="20" rx="3" class="pill"/><circle cx="328" cy="152" r="2.5" class="dot-d"/><text x="335" y="156" class="sl">Dart</text></g>
+<g class="p24"><rect x="372" y="142" width="66" height="20" rx="3" class="pill"/><circle cx="382" cy="152" r="2.5" class="dot-d"/><text x="389" y="156" class="sl">YAML</text></g>
+
+<!-- right side decoration -->
+<text x="840" y="52" font-family="JetBrains Mono,monospace" font-size="8" fill="#1e3a5f" text-anchor="end">24 TOOLS</text>
+<text x="840" y="88" font-family="JetBrains Mono,monospace" font-size="8" fill="#1e3a5f" text-anchor="end">CROSS-PLATFORM</text>
+<text x="840" y="122" font-family="JetBrains Mono,monospace" font-size="8" fill="#1e3a5f" text-anchor="end">CLOUD-NATIVE</text>
+<text x="840" y="156" font-family="JetBrains Mono,monospace" font-size="8" fill="#1e3a5f" text-anchor="end">POLYGLOT</text>
+
+<line x1="20" y1="170" x2="840" y2="170" stroke="#1e3a5f" stroke-width="0.5"/>
+</svg>

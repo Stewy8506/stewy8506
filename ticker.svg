@@ -1,0 +1,18 @@
+<svg width="100%" viewBox="0 0 860 36" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>
+    .tk{font-family:'JetBrains Mono',monospace;font-size:10px;fill:#3B82F6;letter-spacing:1px}
+    .scroll{animation:sc 22s linear infinite}
+    @keyframes sc{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  </style>
+</defs>
+<rect width="860" height="36" fill="#060a10"/>
+<line x1="0" y1="0" x2="860" y2="0" stroke="#1e3a5f" stroke-width="0.5"/>
+<line x1="0" y1="35" x2="860" y2="35" stroke="#1e3a5f" stroke-width="0.5"/>
+<clipPath id="tc"><rect width="860" height="36"/></clipPath>
+<g clip-path="url(#tc)">
+<g class="scroll">
+<text y="22" class="tk">·  ANUVAB DAS  ·  IoT ENGINEER  ·  ROBOTICS  ·  FULL-STACK  ·  KOLKATA IN  ·  ESP32  ·  ROS  ·  FLUTTER  ·  REACT  ·  OPEN TO COLLABS  ·  ANUVAB DAS  ·  IoT ENGINEER  ·  ROBOTICS  ·  FULL-STACK  ·  KOLKATA IN  ·  ESP32  ·  ROS  ·  FLUTTER  ·  REACT  ·  OPEN TO COLLABS  ·</text>
+</g>
+</g>
+</svg>
