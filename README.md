@@ -73,7 +73,9 @@ focus:
 
 <div align="center">
 
-<img height="155" src="https://github-readme-stats.vercel.app/api?username=Stewy8506&show_icons=true&theme=github_dark&bg_color=060a10&title_color=3B82F6&text_color=4b5563&icon_color=3B82F6&border_color=1e3a5f&hide_border=false&count_private=true&include_all_commits=true&rank_icon=github"/>&nbsp;<img height="155" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Stewy8506&layout=compact&theme=github_dark&bg_color=060a10&title_color=3B82F6&text_color=4b5563&border_color=1e3a5f&hide_border=false&langs_count=6"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Stewy8506&theme=github_dark" width="96%"/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Stewy8506&theme=github_dark" height="155"/>&nbsp;<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Stewy8506&theme=github_dark" height="155"/>&nbsp;<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Stewy8506&theme=github_dark" height="155"/>&nbsp;<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Stewy8506&theme=github_dark&utcOffset=5.5" height="155"/>
 
 </div>
 
