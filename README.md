@@ -13,59 +13,9 @@
 <br/>
 
 <div align="center">
-  <table width="100%" style="background-color: #030712; border: 1px solid #1f2937; border-radius: 12px; max-width: 860px; border-spacing: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-family: 'JetBrains Mono', monospace; overflow: hidden; border-collapse: separate;">
-    <!-- Title Bar -->
-    <tr>
-      <td colspan="2" style="background-color: #0f172a; padding: 12px; border-bottom: 1px solid #1f2937; border-top-left-radius: 11px; border-top-right-radius: 11px; color: #9ca3af; font-size: 11px; font-weight: bold; vertical-align: middle;">
-        <span style="width: 10px; height: 10px; background-color: #FF5F56; border-radius: 50%; display: inline-block; margin-right: 4px; vertical-align: middle;"></span>
-        <span style="width: 10px; height: 10px; background-color: #FFBD2E; border-radius: 50%; display: inline-block; margin-right: 4px; vertical-align: middle;"></span>
-        <span style="width: 10px; height: 10px; background-color: #27C93F; border-radius: 50%; display: inline-block; margin-right: 12px; vertical-align: middle;"></span>
-        <span style="vertical-align: middle;">anuvab@macbook-pro-m3: ~/diagnostics</span>
-      </td>
-    </tr>
-    <!-- Content Body -->
-    <tr>
-      <!-- Left Column (YAML Config) -->
-      <td width="50%" valign="top" style="padding: 20px; border-right: 1px solid #1f2937; border-bottom: none; color: #d1d5db; font-size: 11px; line-height: 1.65; background: transparent;">
-        <span style="color: #6b7280;"># anuvab.config.yaml [v5.0-HUD]</span><br/>
-        <span style="color: #f87171;">name</span>: <span style="color: #e2e8f0;">"Anuvab Das"</span><br/>
-        <span style="color: #f87171;">role</span>: <span style="color: #e2e8f0;">"Full-Stack &amp; Embedded Systems Developer"</span><br/>
-        <span style="color: #f87171;">focus</span>:<br/>
-        &nbsp;&nbsp;<span style="color: #c084fc;">hardware</span>:<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;- <span style="color: #60A5FA;">MCU</span>: [<span style="color: #e2e8f0;">"ESP32"</span>, <span style="color: #e2e8f0;">"ESP32-S3"</span>, <span style="color: #e2e8f0;">"STM32F401"</span>]<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;- <span style="color: #60A5FA;">Protocols</span>: [<span style="color: #e2e8f0;">"BLE"</span>, <span style="color: #e2e8f0;">"I2S"</span>, <span style="color: #e2e8f0;">"I2C"</span>, <span style="color: #e2e8f0;">"DMA"</span>]<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;- <span style="color: #60A5FA;">CAD</span>: [<span style="color: #e2e8f0;">"KiCad"</span>, <span style="color: #e2e8f0;">"Custom PCB Design"</span>]<br/>
-        &nbsp;&nbsp;<span style="color: #c084fc;">systems</span>:<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;- <span style="color: #60A5FA;">Languages</span>: [<span style="color: #e2e8f0;">"Rust"</span>, <span style="color: #e2e8f0;">"C/C++"</span>, <span style="color: #e2e8f0;">"Python"</span>]<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;- <span style="color: #60A5FA;">Engine</span>: [<span style="color: #e2e8f0;">"Tauri v2"</span>, <span style="color: #e2e8f0;">"oxc-parser"</span>, <span style="color: #e2e8f0;">"Tree-Sitter"</span>]<br/>
-        &nbsp;&nbsp;<span style="color: #c084fc;">software</span>:<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;- <span style="color: #60A5FA;">Frontend</span>: [<span style="color: #e2e8f0;">"React 19"</span>, <span style="color: #e2e8f0;">"Next.js"</span>, <span style="color: #e2e8f0;">"Zustand"</span>]<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;- <span style="color: #60A5FA;">Mobile</span>: [<span style="color: #e2e8f0;">"React Native"</span>, <span style="color: #e2e8f0;">"Expo v54"</span>]<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;- <span style="color: #60A5FA;">Backend</span>: [<span style="color: #e2e8f0;">"FastAPI"</span>, <span style="color: #e2e8f0;">"Node.js"</span>, <span style="color: #e2e8f0;">"Firebase"</span>]<br/>
-        &nbsp;&nbsp;<span style="color: #c084fc;">ai_ml</span>:<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;- <span style="color: #60A5FA;">Orchestration</span>: [<span style="color: #e2e8f0;">"Gemini API"</span>, <span style="color: #e2e8f0;">"Local RAG"</span>]<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;- <span style="color: #60A5FA;">Vision</span>: [<span style="color: #e2e8f0;">"YOLOv8 Computer Vision"</span>]
-      </td>
-      <!-- Right Column (Diagnostics) -->
-      <td width="50%" valign="top" style="padding: 20px; border-bottom: none; color: #d1d5db; font-size: 11px; line-height: 1.65; background: transparent;">
-        <span style="color: #10B981;">$ system_diagnostics --skills</span><br/><br/>
-        <span style="font-weight: bold; color: #e2e8f0;">[EMBEDDED / DSP ]</span><span style="display: inline-block; width: 100px; height: 8px; background-color: #1e293b; border-radius: 4px; overflow: hidden; vertical-align: middle; margin: 0 8px 0 4px;"><span style="display: block; width: 92%; height: 100%; background-color: #10B981; border-radius: 4px;"></span></span> 92%<br/>
-        &nbsp;&nbsp;<span style="color: #6b7280;">↳ STM32 DMA buffer loops, I2S DAC mixing</span><br/>
-        &nbsp;&nbsp;<span style="color: #6b7280;">↳ Sensor fusion, autonomous crash alert</span><br/>
-        <span style="font-weight: bold; color: #e2e8f0;">[FULL-STACK AI  ]</span><span style="display: inline-block; width: 100px; height: 8px; background-color: #1e293b; border-radius: 4px; overflow: hidden; vertical-align: middle; margin: 0 8px 0 4px;"><span style="display: block; width: 80%; height: 100%; background-color: #3B82F6; border-radius: 4px;"></span></span> 80%<br/>
-        &nbsp;&nbsp;<span style="color: #6b7280;">↳ Custom agentic tool routing</span><br/>
-        &nbsp;&nbsp;<span style="color: #6b7280;">↳ Multi-LLM load balancing &amp; cost logs</span><br/>
-        <span style="font-weight: bold; color: #e2e8f0;">[SYSTEMS / RUST ]</span><span style="display: inline-block; width: 100px; height: 8px; background-color: #1e293b; border-radius: 4px; overflow: hidden; vertical-align: middle; margin: 0 8px 0 4px;"><span style="display: block; width: 70%; height: 100%; background-color: #EF4444; border-radius: 4px;"></span></span> 70%<br/>
-        &nbsp;&nbsp;<span style="color: #6b7280;">↳ Native Tauri IPC &amp; oxc-parser bindings</span><br/>
-        &nbsp;&nbsp;<span style="color: #6b7280;">↳ Real-time spatial AST visualisations</span><br/>
-        <span style="font-weight: bold; color: #e2e8f0;">[MOBILE / STATE ]</span><span style="display: inline-block; width: 100px; height: 8px; background-color: #1e293b; border-radius: 4px; overflow: hidden; vertical-align: middle; margin: 0 8px 0 4px;"><span style="display: block; width: 60%; height: 100%; background-color: #8B5CF6; border-radius: 4px;"></span></span> 60%<br/>
-        &nbsp;&nbsp;<span style="color: #6b7280;">↳ Custom native Expo alarms &amp; modules</span><br/>
-        &nbsp;&nbsp;<span style="color: #6b7280;">↳ Real-time Firestore synchronization</span><br/><br/>
-        <span style="color: #60A5FA;">Uptime: [LIVE]</span><br/>
-        <span style="color: #10B981;">All systems operational.</span>
-      </td>
-    </tr>
-  </table>
+
+[![diagnostics](./diagnostics.svg?v=5.4)](https://anvv.tech)
+
 </div>
 
 <br/>

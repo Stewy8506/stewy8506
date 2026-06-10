@@ -1,0 +1,223 @@
+<svg width="100%" viewBox="0 0 860 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+      
+      .window-bg {
+        fill: #030712;
+        fill-opacity: 0.85;
+        stroke: url(#glassBorder);
+        stroke-width: 1.5;
+        rx: 16px;
+      }
+      .window-header {
+        fill: #090d16;
+        fill-opacity: 0.9;
+        rx: 16px;
+      }
+      .window-title {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        fill: #4b5563;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .txt-mono {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        fill: #e2e8f0;
+      }
+      .txt-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        font-weight: bold;
+      }
+      .txt-percent {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9.5px;
+        font-weight: bold;
+      }
+      .txt-detail {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9.5px;
+        fill: #6b7280;
+      }
+      
+      .btn-red { fill: #FF5F56; }
+      .btn-yellow { fill: #FFBD2E; }
+      .btn-green { fill: #27C93F; }
+
+      /* Progress bar fill animations */
+      .fill-green { fill: #10B981; animation: growGreen 1.8s ease-out forwards; }
+      .fill-blue { fill: #3B82F6; animation: growBlue 1.8s ease-out forwards; }
+      .fill-red { fill: #EF4444; animation: growRed 1.8s ease-out forwards; }
+      .fill-purple { fill: #8B5CF6; animation: growPurple 1.8s ease-out forwards; }
+      @keyframes growGreen { from { width: 0; } to { width: 138px; } }
+      @keyframes growBlue { from { width: 0; } to { width: 120px; } }
+      @keyframes growRed { from { width: 0; } to { width: 105px; } }
+      @keyframes growPurple { from { width: 0; } to { width: 90px; } }
+
+      /* Ambient glowing backdrops */
+      .bg-glow-purple {
+        fill: #8B5CF6;
+        filter: url(#heavyGlow);
+        opacity: 0.06;
+        animation: floatPurple 8s ease-in-out infinite alternate;
+      }
+      .bg-glow-blue {
+        fill: #3B82F6;
+        filter: url(#heavyGlow);
+        opacity: 0.06;
+        animation: floatBlue 8s ease-in-out infinite alternate-reverse;
+      }
+      @keyframes floatPurple {
+        0% { transform: scale(1) translate(0, 0); }
+        100% { transform: scale(1.1) translate(-10px, 10px); }
+      }
+      @keyframes floatBlue {
+        0% { transform: scale(1.1) translate(0, 0); }
+        100% { transform: scale(1) translate(10px, -10px); }
+      }
+    ]]></style>
+
+    <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="30" />
+    </filter>
+
+    <linearGradient id="glassBorder" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="40%" stop-color="#3B82F6" stop-opacity="0.05"/>
+      <stop offset="70%" stop-color="#8B5CF6" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <linearGradient id="glassBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.003"/>
+    </linearGradient>
+
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1f2937" stroke-width="0.6" stroke-opacity="0.18"/>
+      <circle cx="30" cy="0" r="0.8" fill="#1f2937" fill-opacity="0.4" />
+    </pattern>
+  </defs>
+
+  <!-- Dark Background -->
+  <rect width="860" height="480" fill="#020205"/>
+
+  <!-- Tech Grid Background -->
+  <rect width="860" height="480" fill="url(#grid)" />
+
+  <!-- Ambient Glows -->
+  <circle cx="200" cy="240" r="120" class="bg-glow-purple"/>
+  <circle cx="660" cy="240" r="120" class="bg-glow-blue"/>
+
+  <!-- Card Body -->
+  <rect x="15" y="15" width="830" height="450" class="window-bg" fill="url(#glassBg)" />
+  <path d="M 15 31 A 16 16 0 0 1 31 15 L 829 15 A 16 16 0 0 1 845 31 L 845 48 L 15 48 Z" class="window-header"/>
+
+  <!-- macOS Window Controls -->
+  <circle cx="40" cy="31.5" r="5" class="btn-red"/>
+  <circle cx="56" cy="31.5" r="5" class="btn-yellow"/>
+  <circle cx="72" cy="31.5" r="5" class="btn-green"/>
+
+  <!-- Title bar info -->
+  <text x="430" y="35" class="window-title" text-anchor="middle">anuvab@macbook-pro-m3: ~/diagnostics</text>
+
+  <!-- Vertical Divider -->
+  <line x1="430" y1="48" x2="430" y2="465" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="3, 3" />
+
+  <!-- ================= LEFT COLUMN: YAML CONFIG ================= -->
+  <g transform="translate(35, 0)">
+    <!-- Header/Comments -->
+    <text x="0" y="80" class="txt-mono" fill="#6b7280"># anuvab.config.yaml [v5.0-HUD]</text>
+
+    <!-- General Info -->
+    <text x="0" y="98" class="txt-mono"><tspan fill="#f87171">name</tspan>: "Anuvab Das"</text>
+    <text x="0" y="116" class="txt-mono"><tspan fill="#f87171">role</tspan>: "Full-Stack &amp; Embedded Systems Developer"</text>
+    <text x="0" y="134" class="txt-mono"><tspan fill="#f87171">focus</tspan>:</text>
+
+    <!-- Hardware Focus -->
+    <text x="15" y="152" class="txt-mono" fill="#c084fc">hardware:</text>
+    <text x="30" y="170" class="txt-mono"><tspan fill="#60a5fa">- MCU</tspan>: ["ESP32", "ESP32-S3", "STM32F401"]</text>
+    <text x="30" y="188" class="txt-mono"><tspan fill="#60a5fa">- Protocols</tspan>: ["BLE", "I2S", "I2C", "DMA"]</text>
+    <text x="30" y="206" class="txt-mono"><tspan fill="#60a5fa">- CAD</tspan>: ["KiCad", "Custom PCB Design"]</text>
+
+    <!-- Systems Focus -->
+    <text x="15" y="224" class="txt-mono" fill="#c084fc">systems:</text>
+    <text x="30" y="242" class="txt-mono"><tspan fill="#60a5fa">- Languages</tspan>: ["Rust", "C/C++", "Python"]</text>
+    <text x="30" y="260" class="txt-mono"><tspan fill="#60a5fa">- Engine</tspan>: ["Tauri v2", "oxc-parser", "Tree-Sitter"]</text>
+
+    <!-- Software Focus -->
+    <text x="15" y="278" class="txt-mono" fill="#c084fc">software:</text>
+    <text x="30" y="296" class="txt-mono"><tspan fill="#60a5fa">- Frontend</tspan>: ["React 19", "Next.js", "Zustand"]</text>
+    <text x="30" y="314" class="txt-mono"><tspan fill="#60a5fa">- Mobile</tspan>: ["React Native", "Expo v54"]</text>
+    <text x="30" y="332" class="txt-mono"><tspan fill="#60a5fa">- Backend</tspan>: ["FastAPI", "Node.js", "Firebase"]</text>
+
+    <!-- AI/ML Focus -->
+    <text x="15" y="350" class="txt-mono" fill="#c084fc">ai_ml:</text>
+    <text x="30" y="368" class="txt-mono"><tspan fill="#60a5fa">- Orchestration</tspan>: ["Gemini API", "Local RAG"]</text>
+    <text x="30" y="386" class="txt-mono"><tspan fill="#60a5fa">- Vision</tspan>: ["YOLOv8 Computer Vision"]</text>
+  </g>
+
+  <!-- ================= RIGHT COLUMN: DIAGNOSTICS ================= -->
+  <g transform="translate(465, 0)">
+    <!-- Command title -->
+    <text x="0" y="80" class="txt-mono" fill="#10B981" font-weight="bold">$ system_diagnostics --skills</text>
+
+    <!-- Diagnostic Block 1: Embedded -->
+    <g>
+      <text x="0" y="110" class="txt-label" fill="#e2e8f0">[EMBEDDED / DSP ]</text>
+      <!-- Progress Bar -->
+      <rect x="165" y="102" width="150" height="8" rx="4" fill="#1e293b"/>
+      <rect x="165" y="102" width="138" height="8" rx="4" class="fill-green"/>
+      <text x="325" y="110" class="txt-percent" fill="#10B981">92%</text>
+      <!-- Details -->
+      <text x="15" y="128" class="txt-detail">↳ STM32 DMA buffer loops, I2S DAC mixing</text>
+      <text x="15" y="144" class="txt-detail">↳ Sensor fusion, autonomous crash alert</text>
+    </g>
+
+    <!-- Diagnostic Block 2: Fullstack AI -->
+    <g>
+      <text x="0" y="178" class="txt-label" fill="#e2e8f0">[FULL-STACK AI  ]</text>
+      <!-- Progress Bar -->
+      <rect x="165" y="170" width="150" height="8" rx="4" fill="#1e293b"/>
+      <rect x="165" y="170" width="120" height="8" rx="4" class="fill-blue"/>
+      <text x="325" y="178" class="txt-percent" fill="#3B82F6">80%</text>
+      <!-- Details -->
+      <text x="15" y="196" class="txt-detail">↳ Custom agentic tool routing</text>
+      <text x="15" y="212" class="txt-detail">↳ Multi-LLM load balancing &amp; cost logs</text>
+    </g>
+
+    <!-- Diagnostic Block 3: Systems/Rust -->
+    <g>
+      <text x="0" y="246" class="txt-label" fill="#e2e8f0">[SYSTEMS / RUST ]</text>
+      <!-- Progress Bar -->
+      <rect x="165" y="238" width="150" height="8" rx="4" fill="#1e293b"/>
+      <rect x="165" y="238" width="105" height="8" rx="4" class="fill-red"/>
+      <text x="325" y="246" class="txt-percent" fill="#EF4444">70%</text>
+      <!-- Details -->
+      <text x="15" y="264" class="txt-detail">↳ Native Tauri IPC &amp; oxc-parser bindings</text>
+      <text x="15" y="280" class="txt-detail">↳ Real-time spatial AST visualisations</text>
+    </g>
+
+    <!-- Diagnostic Block 4: Mobile/State -->
+    <g>
+      <text x="0" y="314" class="txt-label" fill="#e2e8f0">[MOBILE / STATE ]</text>
+      <!-- Progress Bar -->
+      <rect x="165" y="306" width="150" height="8" rx="4" fill="#1e293b"/>
+      <rect x="165" y="306" width="90" height="8" rx="4" class="fill-purple"/>
+      <text x="325" y="314" class="txt-percent" fill="#8B5CF6">60%</text>
+      <!-- Details -->
+      <text x="15" y="332" class="txt-detail">↳ Custom native Expo alarms &amp; modules</text>
+      <text x="15" y="348" class="txt-detail">↳ Real-time Firestore synchronization</text>
+    </g>
+
+    <!-- Status Footer -->
+    <g transform="translate(0, 390)">
+      <text x="0" y="0" class="txt-mono" fill="#60A5FA" font-weight="bold">Uptime: [LIVE]</text>
+      <text x="0" y="18" class="txt-mono" fill="#10B981" font-weight="bold">All systems operational.</text>
+    </g>
+  </g>
+
+</svg>
