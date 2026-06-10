@@ -1,6 +1,6 @@
 <div align="center">
 
-![header](https://raw.githubusercontent.com/Stewy8506/Stewy8506/main/header.svg)
+![header](./header.svg)
 
 </div>
 
@@ -68,7 +68,7 @@ All systems operational.
 
 <div align="center">
 
-![ticker](https://raw.githubusercontent.com/Stewy8506/Stewy8506/main/ticker.svg)
+![ticker](./ticker.svg)
 
 </div>
 
@@ -76,7 +76,7 @@ All systems operational.
 
 <div align="center">
 
-![skills](https://raw.githubusercontent.com/Stewy8506/Stewy8506/main/skills.svg)
+![skills](./skills.svg)
 
 </div>
 
@@ -84,7 +84,7 @@ All systems operational.
 
 <div align="center">
 
-![projects](https://raw.githubusercontent.com/Stewy8506/Stewy8506/main/projects.svg)
+![projects](./projects.svg)
 
 </div>
 
@@ -118,6 +118,6 @@ All systems operational.
 
 <div align="center">
 
-![ticker](https://raw.githubusercontent.com/Stewy8506/Stewy8506/main/ticker.svg)
+![ticker](./ticker.svg)
 
 </div>
