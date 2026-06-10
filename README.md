@@ -1,6 +1,6 @@
 <div align="center">
 
-![header](./header.svg)
+![header](./header.svg?v=5.1)
 
 </div>
 
@@ -68,7 +68,7 @@ All systems operational.
 
 <div align="center">
 
-![ticker](./ticker.svg)
+![ticker](./ticker.svg?v=5.1)
 
 </div>
 
@@ -76,7 +76,7 @@ All systems operational.
 
 <div align="center">
 
-![skills](./skills.svg)
+![skills](./skills.svg?v=5.1)
 
 </div>
 
@@ -84,7 +84,7 @@ All systems operational.
 
 <div align="center">
 
-![projects](./projects.svg)
+![projects](./projects.svg?v=5.1)
 
 </div>
 
@@ -118,6 +118,6 @@ All systems operational.
 
 <div align="center">
 
-![ticker](./ticker.svg)
+![ticker](./ticker.svg?v=5.1)
 
 </div>
