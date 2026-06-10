@@ -61,10 +61,9 @@
         to { transform: scaleX(1); }
       }
 
-      /* Staggered Column Entrance */
+      /* Staggered Column Entrance - Nested to prevent transform conflicts */
       .col-group {
         opacity: 0;
-        transform: translateY(12px);
         animation: colSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       }
       .col-1 { animation-delay: 0.05s; }
@@ -72,6 +71,7 @@
       .col-3 { animation-delay: 0.25s; }
       .col-4 { animation-delay: 0.35s; }
       @keyframes colSlideUp {
+        from { opacity: 0; transform: translateY(12px); }
         to { opacity: 1; transform: translateY(0); }
       }
 
@@ -122,142 +122,150 @@
   <line x1="20" y1="30" x2="840" y2="30" stroke="#1f2937" stroke-width="0.8"/>
 
   <!-- ================= COLUMN 1: EMBEDDED (Green) ================= -->
-  <g class="col-group col-1" transform="translate(20, 42)">
-    <rect width="195" height="215" class="glass-col" fill="url(#colBg)"/>
-    <rect x="10" y="10" width="175" height="28" class="glass-col-header"/>
-    <circle cx="24" cy="24" r="4" fill="#10B981"/>
-    <text x="36" y="28" class="stack-title">EMBEDDED</text>
+  <g transform="translate(20, 42)">
+    <g class="col-group col-1">
+      <rect width="195" height="215" class="glass-col" fill="url(#colBg)"/>
+      <rect x="10" y="10" width="175" height="28" class="glass-col-header"/>
+      <circle cx="24" cy="24" r="4" fill="#10B981"/>
+      <text x="36" y="28" class="stack-title">EMBEDDED</text>
 
-    <!-- Skills List -->
-    <g transform="translate(15, 50)">
-      <!-- Skill 1 -->
-      <text x="0" y="20" class="txt-mono">ESP32-S3 / ESP32</text>
-      <rect x="0" y="26" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="26" width="121" height="6" class="progress-fill-green bar-load"/>
-      <text x="145" y="32" class="txt-percent" fill="#10B981">90%</text>
+      <!-- Skills List -->
+      <g transform="translate(15, 50)">
+        <!-- Skill 1 -->
+        <text x="0" y="20" class="txt-mono">ESP32-S3 / ESP32</text>
+        <rect x="0" y="26" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="26" width="121" height="6" class="progress-fill-green bar-load"/>
+        <text x="145" y="32" class="txt-percent" fill="#10B981">90%</text>
 
-      <!-- Skill 2 -->
-      <text x="0" y="55" class="txt-mono">STM32 HAL / DSP</text>
-      <rect x="0" y="61" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="61" width="114" height="6" class="progress-fill-green bar-load"/>
-      <text x="145" y="67" class="txt-percent" fill="#10B981">85%</text>
+        <!-- Skill 2 -->
+        <text x="0" y="55" class="txt-mono">STM32 HAL / DSP</text>
+        <rect x="0" y="61" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="61" width="114" height="6" class="progress-fill-green bar-load"/>
+        <text x="145" y="67" class="txt-percent" fill="#10B981">85%</text>
 
-      <!-- Skill 3 -->
-      <text x="0" y="90" class="txt-mono">FreeRTOS Scheduling</text>
-      <rect x="0" y="96" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="96" width="101" height="6" class="progress-fill-green bar-load"/>
-      <text x="145" y="102" class="txt-percent" fill="#10B981">75%</text>
+        <!-- Skill 3 -->
+        <text x="0" y="90" class="txt-mono">FreeRTOS Scheduling</text>
+        <rect x="0" y="96" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="96" width="101" height="6" class="progress-fill-green bar-load"/>
+        <text x="145" y="102" class="txt-percent" fill="#10B981">75%</text>
 
-      <!-- Skill 4 -->
-      <text x="0" y="125" class="txt-mono">ROS / Sensor Fusion</text>
-      <rect x="0" y="131" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="131" width="94" height="6" class="progress-fill-green bar-load"/>
-      <text x="145" y="137" class="txt-percent" fill="#10B981">70%</text>
+        <!-- Skill 4 -->
+        <text x="0" y="125" class="txt-mono">ROS / Sensor Fusion</text>
+        <rect x="0" y="131" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="131" width="94" height="6" class="progress-fill-green bar-load"/>
+        <text x="145" y="137" class="txt-percent" fill="#10B981">70%</text>
+      </g>
     </g>
   </g>
 
   <!-- ================= COLUMN 2: SYSTEMS & RUST (Red) ================= -->
-  <g class="col-group col-2" transform="translate(225, 42)">
-    <rect width="195" height="215" class="glass-col" fill="url(#colBg)"/>
-    <rect x="10" y="10" width="175" height="28" class="glass-col-header"/>
-    <circle cx="24" cy="24" r="4" fill="#EF4444"/>
-    <text x="36" y="28" class="stack-title">SYSTEMS</text>
+  <g transform="translate(225, 42)">
+    <g class="col-group col-2">
+      <rect width="195" height="215" class="glass-col" fill="url(#colBg)"/>
+      <rect x="10" y="10" width="175" height="28" class="glass-col-header"/>
+      <circle cx="24" cy="24" r="4" fill="#EF4444"/>
+      <text x="36" y="28" class="stack-title">SYSTEMS</text>
 
-    <!-- Skills List -->
-    <g transform="translate(15, 50)">
-      <!-- Skill 1 -->
-      <text x="0" y="20" class="txt-mono">Rust System Dev</text>
-      <rect x="0" y="26" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="26" width="108" height="6" class="progress-fill-red bar-load"/>
-      <text x="145" y="32" class="txt-percent" fill="#EF4444">80%</text>
+      <!-- Skills List -->
+      <g transform="translate(15, 50)">
+        <!-- Skill 1 -->
+        <text x="0" y="20" class="txt-mono">Rust System Dev</text>
+        <rect x="0" y="26" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="26" width="108" height="6" class="progress-fill-red bar-load"/>
+        <text x="145" y="32" class="txt-percent" fill="#EF4444">80%</text>
 
-      <!-- Skill 2 -->
-      <text x="0" y="55" class="txt-mono">Tauri v2 Desktop</text>
-      <rect x="0" y="61" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="61" width="101" height="6" class="progress-fill-red bar-load"/>
-      <text x="145" y="67" class="txt-percent" fill="#EF4444">75%</text>
+        <!-- Skill 2 -->
+        <text x="0" y="55" class="txt-mono">Tauri v2 Desktop</text>
+        <rect x="0" y="61" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="61" width="101" height="6" class="progress-fill-red bar-load"/>
+        <text x="145" y="67" class="txt-percent" fill="#EF4444">75%</text>
 
-      <!-- Skill 3 -->
-      <text x="0" y="90" class="txt-mono">AST Node Parsing</text>
-      <rect x="0" y="96" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="96" width="108" height="6" class="progress-fill-red bar-load"/>
-      <text x="145" y="102" class="txt-percent" fill="#EF4444">80%</text>
+        <!-- Skill 3 -->
+        <text x="0" y="90" class="txt-mono">AST Node Parsing</text>
+        <rect x="0" y="96" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="96" width="108" height="6" class="progress-fill-red bar-load"/>
+        <text x="145" y="102" class="txt-percent" fill="#EF4444">80%</text>
 
-      <!-- Skill 4 -->
-      <text x="0" y="125" class="txt-mono">C/C++ Embed / Comp</text>
-      <rect x="0" y="131" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="131" width="114" height="6" class="progress-fill-red bar-load"/>
-      <text x="145" y="137" class="txt-percent" fill="#EF4444">85%</text>
+        <!-- Skill 4 -->
+        <text x="0" y="125" class="txt-mono">C/C++ Embed / Comp</text>
+        <rect x="0" y="131" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="131" width="114" height="6" class="progress-fill-red bar-load"/>
+        <text x="145" y="137" class="txt-percent" fill="#EF4444">85%</text>
+      </g>
     </g>
   </g>
 
   <!-- ================= COLUMN 3: WEB / FULL-STACK (Blue) ================= -->
-  <g class="col-group col-3" transform="translate(430, 42)">
-    <rect width="195" height="215" class="glass-col" fill="url(#colBg)"/>
-    <rect x="10" y="10" width="175" height="28" class="glass-col-header"/>
-    <circle cx="24" cy="24" r="4" fill="#3B82F6"/>
-    <text x="36" y="28" class="stack-title">FULL-STACK</text>
+  <g transform="translate(430, 42)">
+    <g class="col-group col-3">
+      <rect width="195" height="215" class="glass-col" fill="url(#colBg)"/>
+      <rect x="10" y="10" width="175" height="28" class="glass-col-header"/>
+      <circle cx="24" cy="24" r="4" fill="#3B82F6"/>
+      <text x="36" y="28" class="stack-title">FULL-STACK</text>
 
-    <!-- Skills List -->
-    <g transform="translate(15, 50)">
-      <!-- Skill 1 -->
-      <text x="0" y="20" class="txt-mono">React 19 / Next.js</text>
-      <rect x="0" y="26" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="26" width="114" height="6" class="progress-fill-blue bar-load"/>
-      <text x="145" y="32" class="txt-percent" fill="#3B82F6">85%</text>
+      <!-- Skills List -->
+      <g transform="translate(15, 50)">
+        <!-- Skill 1 -->
+        <text x="0" y="20" class="txt-mono">React 19 / Next.js</text>
+        <rect x="0" y="26" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="26" width="114" height="6" class="progress-fill-blue bar-load"/>
+        <text x="145" y="32" class="txt-percent" fill="#3B82F6">85%</text>
 
-      <!-- Skill 2 -->
-      <text x="0" y="55" class="txt-mono">FastAPI API Engine</text>
-      <rect x="0" y="61" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="61" width="108" height="6" class="progress-fill-blue bar-load"/>
-      <text x="145" y="67" class="txt-percent" fill="#3B82F6">80%</text>
+        <!-- Skill 2 -->
+        <text x="0" y="55" class="txt-mono">FastAPI API Engine</text>
+        <rect x="0" y="61" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="61" width="108" height="6" class="progress-fill-blue bar-load"/>
+        <text x="145" y="67" class="txt-percent" fill="#3B82F6">80%</text>
 
-      <!-- Skill 3 -->
-      <text x="0" y="90" class="txt-mono">Node.js / Express</text>
-      <rect x="0" y="96" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="96" width="101" height="6" class="progress-fill-blue bar-load"/>
-      <text x="145" y="102" class="txt-percent" fill="#3B82F6">75%</text>
+        <!-- Skill 3 -->
+        <text x="0" y="90" class="txt-mono">Node.js / Express</text>
+        <rect x="0" y="96" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="96" width="101" height="6" class="progress-fill-blue bar-load"/>
+        <text x="145" y="102" class="txt-percent" fill="#3B82F6">75%</text>
 
-      <!-- Skill 4 -->
-      <text x="0" y="125" class="txt-mono">ChromaDB / SQLite</text>
-      <rect x="0" y="131" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="131" width="94" height="6" class="progress-fill-blue bar-load"/>
-      <text x="145" y="137" class="txt-percent" fill="#3B82F6">70%</text>
+        <!-- Skill 4 -->
+        <text x="0" y="125" class="txt-mono">ChromaDB / SQLite</text>
+        <rect x="0" y="131" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="131" width="94" height="6" class="progress-fill-blue bar-load"/>
+        <text x="145" y="137" class="txt-percent" fill="#3B82F6">70%</text>
+      </g>
     </g>
   </g>
 
   <!-- ================= COLUMN 4: MOBILE & AI (Purple) ================= -->
-  <g class="col-group col-4" transform="translate(635, 42)">
-    <rect width="195" height="215" class="glass-col" fill="url(#colBg)"/>
-    <rect x="10" y="10" width="175" height="28" class="glass-col-header"/>
-    <circle cx="24" cy="24" r="4" fill="#8B5CF6"/>
-    <text x="36" y="28" class="stack-title">MOBILE / AI</text>
+  <g transform="translate(635, 42)">
+    <g class="col-group col-4">
+      <rect width="195" height="215" class="glass-col" fill="url(#colBg)"/>
+      <rect x="10" y="10" width="175" height="28" class="glass-col-header"/>
+      <circle cx="24" cy="24" r="4" fill="#8B5CF6"/>
+      <text x="36" y="28" class="stack-title">MOBILE / AI</text>
 
-    <!-- Skills List -->
-    <g transform="translate(15, 50)">
-      <!-- Skill 1 -->
-      <text x="0" y="20" class="txt-mono">React Native / Expo</text>
-      <rect x="0" y="26" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="26" width="108" height="6" class="progress-fill-purple bar-load"/>
-      <text x="145" y="32" class="txt-percent" fill="#8B5CF6">80%</text>
+      <!-- Skills List -->
+      <g transform="translate(15, 50)">
+        <!-- Skill 1 -->
+        <text x="0" y="20" class="txt-mono">React Native / Expo</text>
+        <rect x="0" y="26" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="26" width="108" height="6" class="progress-fill-purple bar-load"/>
+        <text x="145" y="32" class="txt-percent" fill="#8B5CF6">80%</text>
 
-      <!-- Skill 2 -->
-      <text x="0" y="55" class="txt-mono">Zustand State Engine</text>
-      <rect x="0" y="61" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="61" width="114" height="6" class="progress-fill-purple bar-load"/>
-      <text x="145" y="67" class="txt-percent" fill="#8B5CF6">85%</text>
+        <!-- Skill 2 -->
+        <text x="0" y="55" class="txt-mono">Zustand State Engine</text>
+        <rect x="0" y="61" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="61" width="114" height="6" class="progress-fill-purple bar-load"/>
+        <text x="145" y="67" class="txt-percent" fill="#8B5CF6">85%</text>
 
-      <!-- Skill 3 -->
-      <text x="0" y="90" class="txt-mono">Gemini API / RAG</text>
-      <rect x="0" y="96" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="96" width="108" height="6" class="progress-fill-purple bar-load"/>
-      <text x="145" y="102" class="txt-percent" fill="#8B5CF6">80%</text>
+        <!-- Skill 3 -->
+        <text x="0" y="90" class="txt-mono">Gemini API / RAG</text>
+        <rect x="0" y="96" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="96" width="108" height="6" class="progress-fill-purple bar-load"/>
+        <text x="145" y="102" class="txt-percent" fill="#8B5CF6">80%</text>
 
-      <!-- Skill 4 -->
-      <text x="0" y="125" class="txt-mono">Firebase / Firestore</text>
-      <rect x="0" y="131" width="135" height="6" class="progress-track"/>
-      <rect x="0" y="131" width="108" height="6" class="progress-fill-purple bar-load"/>
-      <text x="145" y="137" class="txt-percent" fill="#8B5CF6">80%</text>
+        <!-- Skill 4 -->
+        <text x="0" y="125" class="txt-mono">Firebase / Firestore</text>
+        <rect x="0" y="131" width="135" height="6" class="progress-track"/>
+        <rect x="0" y="131" width="108" height="6" class="progress-fill-purple bar-load"/>
+        <text x="145" y="137" class="txt-percent" fill="#8B5CF6">80%</text>
+      </g>
     </g>
   </g>
 
