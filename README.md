@@ -1,12 +1,12 @@
 <div align="center">
 
-![header](./header.svg?v=5.2)
+![header](./header.svg?v=5.3)
 
 </div>
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-020205?style=for-the-badge&logo=linkedin&logoColor=3B82F6&labelColor=020205)](https://www.linkedin.com/in/anv-dev/)&nbsp;&nbsp;[![Instagram](https://img.shields.io/badge/INSTAGRAM-020205?style=for-the-badge&logo=instagram&logoColor=3B82F6&labelColor=020205)](https://www.instagram.com/anv.vibes/)&nbsp;&nbsp;[![Email](https://img.shields.io/badge/EMAIL-020205?style=for-the-badge&logo=gmail&logoColor=3B82F6&labelColor=020205)](mailto:dasanuvab38@gmail.com)&nbsp;&nbsp;[![GitHub](https://img.shields.io/badge/GITHUB-020205?style=for-the-badge&logo=github&logoColor=3B82F6&labelColor=020205)](https://github.com/Stewy8506)
+[![Portfolio](https://img.shields.io/badge/PORTFOLIO-020205?style=for-the-badge&logo=googlechrome&logoColor=3B82F6&labelColor=020205)](https://anvv.tech/)&nbsp;&nbsp;[![LinkedIn](https://img.shields.io/badge/LINKEDIN-020205?style=for-the-badge&logo=linkedin&logoColor=3B82F6&labelColor=020205)](https://www.linkedin.com/in/anv-dev/)&nbsp;&nbsp;[![Instagram](https://img.shields.io/badge/INSTAGRAM-020205?style=for-the-badge&logo=instagram&logoColor=3B82F6&labelColor=020205)](https://www.instagram.com/anv.vibes/)&nbsp;&nbsp;[![Email](https://img.shields.io/badge/EMAIL-020205?style=for-the-badge&logo=gmail&logoColor=3B82F6&labelColor=020205)](mailto:dasanuvab38@gmail.com)&nbsp;&nbsp;[![GitHub](https://img.shields.io/badge/GITHUB-020205?style=for-the-badge&logo=github&logoColor=3B82F6&labelColor=020205)](https://github.com/Stewy8506)
 
 </div>
 
@@ -80,7 +80,7 @@
 
 <div align="center">
 
-![ticker](./ticker.svg?v=5.2)
+![ticker](./ticker.svg?v=5.3)
 
 </div>
 
@@ -88,7 +88,7 @@
 
 <div align="center">
 
-![skills](./skills.svg?v=5.2)
+![skills](./skills.svg?v=5.3)
 
 </div>
 
@@ -96,7 +96,7 @@
 
 <div align="center">
 
-![projects](./projects.svg?v=5.2)
+![projects](./projects.svg?v=5.3)
 
 </div>
 
@@ -130,6 +130,6 @@
 
 <div align="center">
 
-![ticker](./ticker.svg?v=5.2)
+![ticker](./ticker.svg?v=5.3)
 
 </div>
