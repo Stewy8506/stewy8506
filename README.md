@@ -130,6 +130,6 @@
 
 <div align="center">
 
-![ticker](./ticker.svg?v=5.1)
+![ticker](./ticker.svg?v=5.2)
 
 </div>
