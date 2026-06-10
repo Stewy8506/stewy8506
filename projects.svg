@@ -3,31 +3,6 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
       
-      .proj-title {
-        font-family: 'Outfit', sans-serif;
-        font-size: 13.5px;
-        font-weight: 800;
-        fill: #ffffff;
-        letter-spacing: 0.5px;
-      }
-      .proj-stack {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 8px;
-        fill: #06B6D4;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-      }
-      .txt-mono {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 8.5px;
-        fill: #9ca3af;
-      }
-      .txt-italic {
-        font-family: 'JetBrains Mono', monospace;
-        font-style: italic;
-        fill: #6b7280;
-      }
-      
       /* Glass Card Widget Styles */
       .glass-card {
         fill: #ffffff;
@@ -79,12 +54,6 @@
       @keyframes activePulse {
         0%, 100% { opacity: 0.6; }
         50% { opacity: 1; }
-      }
-
-      .status-lbl {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 7.5px;
-        font-weight: bold;
       }
 
       /* Entrance Animation - Nested to prevent absolute translation conflict */
@@ -172,30 +141,36 @@
         </g>
 
         <g transform="translate(15, 70)">
-          <text x="0" y="10" class="proj-title">Smart Helmet</text>
-          <text x="0" y="22" class="proj-stack">ESP32 · STM32 · CV</text>
+          <text x="0" y="10" font-family="'JetBrains Mono', monospace" font-size="8" fill="#06B6D4" font-weight="bold" letter-spacing="1px">EMBEDDED / DSP</text>
+          <text x="0" y="26" font-family="'Outfit', sans-serif" font-size="13.5" fill="#ffffff" font-weight="bold" letter-spacing="0.5px">Smart Helmet</text>
+          <text x="0" y="38" font-family="'Outfit', sans-serif" font-size="13.5" fill="#ffffff" font-weight="bold" letter-spacing="0.5px">System</text>
           
-          <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <line x1="0" y1="46" x2="165" y2="46" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-          <text x="0" y="46" class="txt-mono">Distributed real-time IoT</text>
-          <text x="0" y="58" class="txt-mono">riding safety system. Multi-</text>
-          <text x="0" y="70" class="txt-mono">MCU data processing, ANC</text>
-          <text x="0" y="82" class="txt-mono">DSP mixing, and YOLOv8</text>
-          <text x="0" y="94" class="txt-mono">ADAS collision warning.</text>
+          <!-- Project description -->
+          <text x="0" y="58" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">Distributed real-time IoT</text>
+          <text x="0" y="70" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">riding safety system. Multi-</text>
+          <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">MCU data processing, ANC</text>
+          <text x="0" y="94" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">DSP mixing, and YOLOv8</text>
+          <text x="0" y="106" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">ADAS collision warning.</text>
 
-          <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <!-- Divider -->
+          <line x1="0" y1="116" x2="165" y2="116" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-          <text x="0" y="120" class="txt-italic">Active telemetry module</text>
-          <text x="0" y="132" class="txt-italic">100Hz IMU sensor fusion</text>
+          <!-- Progress stats -->
+          <text x="0" y="128" font-family="'JetBrains Mono', monospace" font-size="8" font-style="italic" fill="#6b7280">Active telemetry module</text>
+          <text x="0" y="138" font-family="'JetBrains Mono', monospace" font-size="8" font-style="italic" fill="#6b7280">100Hz IMU sensor fusion</text>
           
-          <rect x="0" y="145" width="125" height="5" class="slider-track"/>
-          <rect x="0" y="145" width="112" height="5" class="slider-fill-green"/>
-          <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#10B981" font-weight="bold">90%</text>
+          <rect x="0" y="150" width="125" height="5" class="slider-track"/>
+          <rect x="0" y="150" width="112" height="5" class="slider-fill-green"/>
+          <text x="135" y="155" font-family="'JetBrains Mono', monospace" font-size="8" fill="#10B981" font-weight="bold">90%</text>
 
-          <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <!-- Divider -->
+          <line x1="0" y1="170" x2="165" y2="170" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-          <circle cx="5" cy="180" r="4.5" class="pulse-green"/>
-          <text x="16" y="183" class="status-lbl" fill="#10B981">● ACTIVE DEV</text>
+          <!-- Status -->
+          <circle cx="5" cy="182" r="4.5" class="pulse-green"/>
+          <text x="16" y="185" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" fill="#10B981">● ACTIVE DEV</text>
         </g>
       </g>
     </g>
@@ -220,30 +195,31 @@
         </g>
 
         <g transform="translate(15, 70)">
-          <text x="0" y="10" class="proj-title">AI Workspace</text>
-          <text x="0" y="22" class="proj-stack">NEXT.JS · FASTAPI</text>
+          <text x="0" y="10" font-family="'JetBrains Mono', monospace" font-size="8" fill="#06B6D4" font-weight="bold" letter-spacing="1px">FULL-STACK / AI</text>
+          <text x="0" y="26" font-family="'Outfit', sans-serif" font-size="13.5" fill="#ffffff" font-weight="bold" letter-spacing="0.5px">AI Workspace</text>
+          <text x="0" y="38" font-family="'Outfit', sans-serif" font-size="13.5" fill="#ffffff" font-weight="bold" letter-spacing="0.5px">(AI-App)</text>
           
-          <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <line x1="0" y1="46" x2="165" y2="46" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-          <text x="0" y="46" class="txt-mono">Self-hosted multi-LLM AI</text>
-          <text x="0" y="58" class="txt-mono">workspace. Custom prompt</text>
-          <text x="0" y="70" class="txt-mono">chain routing, local vector</text>
-          <text x="0" y="82" class="txt-mono">rag database, cost logs,</text>
-          <text x="0" y="94" class="txt-mono">and Python sandbox environments.</text>
+          <text x="0" y="58" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">Self-hosted multi-LLM AI</text>
+          <text x="0" y="70" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">workspace. Custom prompt</text>
+          <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">chain routing, local vector</text>
+          <text x="0" y="94" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">rag database, cost logs,</text>
+          <text x="0" y="106" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">and Python sandbox environments.</text>
 
-          <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <line x1="0" y1="116" x2="165" y2="116" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-          <text x="0" y="120" class="txt-italic">Universal API routing</text>
-          <text x="0" y="132" class="txt-italic">Model battle &amp; Elo stats</text>
+          <text x="0" y="128" font-family="'JetBrains Mono', monospace" font-size="8" font-style="italic" fill="#6b7280">Universal API routing</text>
+          <text x="0" y="138" font-family="'JetBrains Mono', monospace" font-size="8" font-style="italic" fill="#6b7280">Model battle &amp; Elo stats</text>
           
-          <rect x="0" y="145" width="125" height="5" class="slider-track"/>
-          <rect x="0" y="145" width="100" height="5" class="slider-fill-blue"/>
-          <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#3B82F6" font-weight="bold">80%</text>
+          <rect x="0" y="150" width="125" height="5" class="slider-track"/>
+          <rect x="0" y="150" width="100" height="5" class="slider-fill-blue"/>
+          <text x="135" y="155" font-family="'JetBrains Mono', monospace" font-size="8" fill="#3B82F6" font-weight="bold">80%</text>
 
-          <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <line x1="0" y1="170" x2="165" y2="170" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-          <circle cx="5" cy="180" r="4.5" class="pulse-green"/>
-          <text x="16" y="183" class="status-lbl" fill="#10B981">● ACTIVE DEV</text>
+          <circle cx="5" cy="182" r="4.5" class="pulse-green"/>
+          <text x="16" y="185" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" fill="#10B981">● ACTIVE DEV</text>
         </g>
       </g>
     </g>
@@ -267,30 +243,31 @@
         </g>
 
         <g transform="translate(15, 70)">
-          <text x="0" y="10" class="proj-title">Dataflow Visualiser</text>
-          <text x="0" y="22" class="proj-stack">RUST · TAURI · REACT</text>
+          <text x="0" y="10" font-family="'JetBrains Mono', monospace" font-size="8" fill="#06B6D4" font-weight="bold" letter-spacing="1px">DESKTOP / COMPILERS</text>
+          <text x="0" y="26" font-family="'Outfit', sans-serif" font-size="13.5" fill="#ffffff" font-weight="bold" letter-spacing="0.5px">Dataflow</text>
+          <text x="0" y="38" font-family="'Outfit', sans-serif" font-size="13.5" fill="#ffffff" font-weight="bold" letter-spacing="0.5px">Visualiser</text>
           
-          <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <line x1="0" y1="46" x2="165" y2="46" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-          <text x="0" y="46" class="txt-mono">High-performance desktop AST</text>
-          <text x="0" y="58" class="txt-mono">dependency graph mapper.</text>
-          <text x="0" y="70" class="txt-mono">Traces local import edges,</text>
-          <text x="0" y="82" class="txt-mono">predicts refactor blast</text>
-          <text x="0" y="94" class="txt-mono">radii with AI refactor tools.</text>
+          <text x="0" y="58" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">High-performance desktop AST</text>
+          <text x="0" y="70" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">dependency graph mapper.</text>
+          <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">Traces local import edges,</text>
+          <text x="0" y="94" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">predicts refactor blast</text>
+          <text x="0" y="106" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">radii with AI refactor tools.</text>
 
-          <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <line x1="0" y1="116" x2="165" y2="116" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-          <text x="0" y="120" class="txt-italic">oxc-parser AST parsing</text>
-          <text x="0" y="132" class="txt-italic">2D/3D force canvas</text>
+          <text x="0" y="128" font-family="'JetBrains Mono', monospace" font-size="8" font-style="italic" fill="#6b7280">oxc-parser AST parsing</text>
+          <text x="0" y="138" font-family="'JetBrains Mono', monospace" font-size="8" font-style="italic" fill="#6b7280">2D/3D force canvas</text>
           
-          <rect x="0" y="145" width="125" height="5" class="slider-track"/>
-          <rect x="0" y="145" width="118" height="5" class="slider-fill-green"/>
-          <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#10B981" font-weight="bold">95%</text>
+          <rect x="0" y="150" width="125" height="5" class="slider-track"/>
+          <rect x="0" y="150" width="118" height="5" class="slider-fill-green"/>
+          <text x="135" y="155" font-family="'JetBrains Mono', monospace" font-size="8" fill="#10B981" font-weight="bold">95%</text>
 
-          <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <line x1="0" y1="170" x2="165" y2="170" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-          <circle cx="5" cy="180" r="4.5" class="pulse-orange"/>
-          <text x="16" y="183" class="status-lbl" fill="#F59E0B">● NEAR RELEASE</text>
+          <circle cx="5" cy="182" r="4.5" class="pulse-orange"/>
+          <text x="16" y="185" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" fill="#F59E0B">● NEAR RELEASE</text>
         </g>
       </g>
     </g>
@@ -309,30 +286,31 @@
         </g>
 
         <g transform="translate(15, 70)">
-          <text x="0" y="10" class="proj-title">Momentum Tracker</text>
-          <text x="0" y="22" class="proj-stack">RN · EXPO · ZUSTAND</text>
+          <text x="0" y="10" font-family="'JetBrains Mono', monospace" font-size="8" fill="#06B6D4" font-weight="bold" letter-spacing="1px">MOBILE / STATE</text>
+          <text x="0" y="26" font-family="'Outfit', sans-serif" font-size="13.5" fill="#ffffff" font-weight="bold" letter-spacing="0.5px">Momentum Tracker</text>
+          <text x="0" y="38" font-family="'Outfit', sans-serif" font-size="13.5" fill="#ffffff" font-weight="bold" letter-spacing="0.5px"> </text>
           
-          <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <line x1="0" y1="46" x2="165" y2="46" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-          <text x="0" y="46" class="txt-mono">Productivity habit application</text>
-          <text x="0" y="58" class="txt-mono">featuring modern dual-shadow</text>
-          <text x="0" y="70" class="txt-mono">neumorphic designs, focus DND</text>
-          <text x="0" y="82" class="txt-mono">native timers, alarms,</text>
-          <text x="0" y="94" class="txt-mono">and group lobby chats.</text>
+          <text x="0" y="58" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">Productivity habit application</text>
+          <text x="0" y="70" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">featuring modern dual-shadow</text>
+          <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">neumorphic designs, focus DND</text>
+          <text x="0" y="94" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">native timers, alarms,</text>
+          <text x="0" y="106" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#9ca3af">and group lobby chats.</text>
 
-          <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <line x1="0" y1="116" x2="165" y2="116" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-          <text x="0" y="120" class="txt-italic">Custom DND system module</text>
-          <text x="0" y="132" class="txt-italic">Firestore sync listeners</text>
+          <text x="0" y="128" font-family="'JetBrains Mono', monospace" font-size="8" font-style="italic" fill="#6b7280">Custom DND system module</text>
+          <text x="0" y="138" font-family="'JetBrains Mono', monospace" font-size="8" font-style="italic" fill="#6b7280">Firestore sync listeners</text>
           
-          <rect x="0" y="145" width="125" height="5" class="slider-track"/>
-          <rect x="0" y="145" width="100" height="5" class="slider-fill-purple"/>
-          <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#8B5CF6" font-weight="bold">80%</text>
+          <rect x="0" y="150" width="125" height="5" class="slider-track"/>
+          <rect x="0" y="150" width="100" height="5" class="slider-fill-purple"/>
+          <text x="135" y="155" font-family="'JetBrains Mono', monospace" font-size="8" fill="#8B5CF6" font-weight="bold">80%</text>
 
-          <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <line x1="0" y1="170" x2="165" y2="170" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-          <circle cx="5" cy="180" r="4.5" class="pulse-green"/>
-          <text x="16" y="183" class="status-lbl" fill="#10B981">● ACTIVE DEV</text>
+          <circle cx="5" cy="182" r="4.5" class="pulse-green"/>
+          <text x="16" y="185" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="bold" fill="#10B981">● ACTIVE DEV</text>
         </g>
       </g>
     </g>
