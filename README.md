@@ -1,6 +1,6 @@
 <div align="center">
 
-![header](./header.svg?v=5.3)
+[![header](./header.svg?v=5.4)](https://anvv.tech)
 
 </div>
 
@@ -16,19 +16,11 @@
   <table width="100%" style="background-color: #030712; border: 1px solid #1f2937; border-radius: 12px; max-width: 860px; border-spacing: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.5); font-family: 'JetBrains Mono', monospace; overflow: hidden; border-collapse: separate;">
     <!-- Title Bar -->
     <tr>
-      <td colspan="2" style="background-color: #0f172a; padding: 12px; border-bottom: 1px solid #1f2937; border-top-left-radius: 11px; border-top-right-radius: 11px; vertical-align: middle;">
-        <table width="100%" style="border-spacing: 0; border-collapse: collapse; background: transparent;">
-          <tr>
-            <td width="50" style="padding: 0; border: none; background: transparent;">
-              <span style="width: 10px; height: 10px; background-color: #FF5F56; border-radius: 50%; display: inline-block; margin-right: 4px;"></span>
-              <span style="width: 10px; height: 10px; background-color: #FFBD2E; border-radius: 50%; display: inline-block; margin-right: 4px;"></span>
-              <span style="width: 10px; height: 10px; background-color: #27C93F; border-radius: 50%; display: inline-block;"></span>
-            </td>
-            <td align="center" style="color: #9ca3af; font-size: 11px; font-weight: bold; padding: 0; border: none; background: transparent; transform: translateX(-25px);">
-              anuvab@macbook-pro-m3: ~/diagnostics
-            </td>
-          </tr>
-        </table>
+      <td colspan="2" style="background-color: #0f172a; padding: 12px; border-bottom: 1px solid #1f2937; border-top-left-radius: 11px; border-top-right-radius: 11px; color: #9ca3af; font-size: 11px; font-weight: bold; vertical-align: middle;">
+        <span style="width: 10px; height: 10px; background-color: #FF5F56; border-radius: 50%; display: inline-block; margin-right: 4px; vertical-align: middle;"></span>
+        <span style="width: 10px; height: 10px; background-color: #FFBD2E; border-radius: 50%; display: inline-block; margin-right: 4px; vertical-align: middle;"></span>
+        <span style="width: 10px; height: 10px; background-color: #27C93F; border-radius: 50%; display: inline-block; margin-right: 12px; vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">anuvab@macbook-pro-m3: ~/diagnostics</span>
       </td>
     </tr>
     <!-- Content Body -->
@@ -57,16 +49,16 @@
       <!-- Right Column (Diagnostics) -->
       <td width="50%" valign="top" style="padding: 20px; border-bottom: none; color: #d1d5db; font-size: 11px; line-height: 1.65; background: transparent;">
         <span style="color: #10B981;">$ system_diagnostics --skills</span><br/><br/>
-        <span style="font-weight: bold; color: #e2e8f0;">[EMBEDDED / DSP ]</span> <span style="color: #10B981;">████████████████████</span> 92%<br/>
+        <span style="font-weight: bold; color: #e2e8f0;">[EMBEDDED / DSP ]</span><span style="display: inline-block; width: 100px; height: 8px; background-color: #1e293b; border-radius: 4px; overflow: hidden; vertical-align: middle; margin: 0 8px 0 4px;"><span style="display: block; width: 92%; height: 100%; background-color: #10B981; border-radius: 4px;"></span></span> 92%<br/>
         &nbsp;&nbsp;<span style="color: #6b7280;">↳ STM32 DMA buffer loops, I2S DAC mixing</span><br/>
         &nbsp;&nbsp;<span style="color: #6b7280;">↳ Sensor fusion, autonomous crash alert</span><br/>
-        <span style="font-weight: bold; color: #e2e8f0;">[FULL-STACK AI  ]</span> <span style="color: #3B82F6;">████████████████░░░░</span> 80%<br/>
+        <span style="font-weight: bold; color: #e2e8f0;">[FULL-STACK AI  ]</span><span style="display: inline-block; width: 100px; height: 8px; background-color: #1e293b; border-radius: 4px; overflow: hidden; vertical-align: middle; margin: 0 8px 0 4px;"><span style="display: block; width: 80%; height: 100%; background-color: #3B82F6; border-radius: 4px;"></span></span> 80%<br/>
         &nbsp;&nbsp;<span style="color: #6b7280;">↳ Custom agentic tool routing</span><br/>
         &nbsp;&nbsp;<span style="color: #6b7280;">↳ Multi-LLM load balancing &amp; cost logs</span><br/>
-        <span style="font-weight: bold; color: #e2e8f0;">[SYSTEMS / RUST ]</span> <span style="color: #EF4444;">██████████████░░░░░░</span> 70%<br/>
+        <span style="font-weight: bold; color: #e2e8f0;">[SYSTEMS / RUST ]</span><span style="display: inline-block; width: 100px; height: 8px; background-color: #1e293b; border-radius: 4px; overflow: hidden; vertical-align: middle; margin: 0 8px 0 4px;"><span style="display: block; width: 70%; height: 100%; background-color: #EF4444; border-radius: 4px;"></span></span> 70%<br/>
         &nbsp;&nbsp;<span style="color: #6b7280;">↳ Native Tauri IPC &amp; oxc-parser bindings</span><br/>
         &nbsp;&nbsp;<span style="color: #6b7280;">↳ Real-time spatial AST visualisations</span><br/>
-        <span style="font-weight: bold; color: #e2e8f0;">[MOBILE / STATE ]</span> <span style="color: #8B5CF6;">████████████░░░░░░░░</span> 60%<br/>
+        <span style="font-weight: bold; color: #e2e8f0;">[MOBILE / STATE ]</span><span style="display: inline-block; width: 100px; height: 8px; background-color: #1e293b; border-radius: 4px; overflow: hidden; vertical-align: middle; margin: 0 8px 0 4px;"><span style="display: block; width: 60%; height: 100%; background-color: #8B5CF6; border-radius: 4px;"></span></span> 60%<br/>
         &nbsp;&nbsp;<span style="color: #6b7280;">↳ Custom native Expo alarms &amp; modules</span><br/>
         &nbsp;&nbsp;<span style="color: #6b7280;">↳ Real-time Firestore synchronization</span><br/><br/>
         <span style="color: #60A5FA;">Uptime: [LIVE]</span><br/>
