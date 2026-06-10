@@ -1,44 +1,76 @@
 <svg width="100%" viewBox="0 0 860 40" xmlns="http://www.w3.org/2000/svg">
-<defs>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&amp;display=swap');
-    .tk {
-      font-family:'JetBrains Mono',monospace;
-      font-size:10px;
-      font-weight:700;
-      letter-spacing:1.5px;
-    }
-    .scroll { animation: sc 20s linear infinite; }
-    @keyframes sc { from { transform:translateX(0); } to { transform:translateX(-50%); } }
-  </style>
-  <linearGradient id="tickerGrad" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%"   stop-color="#1e3a5f"/>
-    <stop offset="25%"  stop-color="#3B82F6"/>
-    <stop offset="50%"  stop-color="#60A5FA"/>
-    <stop offset="75%"  stop-color="#3B82F6"/>
-    <stop offset="100%" stop-color="#1e3a5f"/>
-  </linearGradient>
-  <clipPath id="tc"><rect width="860" height="40"/></clipPath>
-</defs>
-<rect width="860" height="40" fill="#020608"/>
-<line x1="0" y1="0"  x2="860" y2="0"  stroke="#1e3a5f" stroke-width="0.8"/>
-<line x1="0" y1="39" x2="860" y2="39" stroke="#1e3a5f" stroke-width="0.8"/>
-<!-- Left fade -->
-<rect x="0" y="0" width="60" height="40" fill="url(#leftFade)"/>
-<rect x="800" y="0" width="60" height="40" fill="url(#rightFade)"/>
-<defs>
-  <linearGradient id="leftFade" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#020608" stop-opacity="1"/>
-    <stop offset="100%" stop-color="#020608" stop-opacity="0"/>
-  </linearGradient>
-  <linearGradient id="rightFade" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#020608" stop-opacity="0"/>
-    <stop offset="100%" stop-color="#020608" stop-opacity="1"/>
-  </linearGradient>
-</defs>
-<g clip-path="url(#tc)">
-  <g class="scroll">
-    <text y="25" class="tk" fill="url(#tickerGrad)">·  ANUVAB DAS  ·  IoT ENGINEER  ·  ROBOTICS  ·  FULL-STACK  ·  KOLKATA, INDIA  ·  ESP32  ·  ROS  ·  FLUTTER  ·  REACT  ·  PCB DESIGN  ·  OPEN TO COLLABS  ·  BUILDING REAL THINGS  ·  ANUVAB DAS  ·  IoT ENGINEER  ·  ROBOTICS  ·  FULL-STACK  ·  KOLKATA, INDIA  ·  ESP32  ·  ROS  ·  FLUTTER  ·  REACT  ·  PCB DESIGN  ·  OPEN TO COLLABS  ·  BUILDING REAL THINGS  ·</text>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&amp;display=swap');
+      
+      .ticker-bg {
+        fill: #030712;
+        stroke: #1f2937;
+        stroke-width: 1;
+        rx: 6px;
+      }
+      .tk-static {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        font-weight: 700;
+        fill: #9ca3af;
+        letter-spacing: 1px;
+      }
+      .tk {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      }
+      .scroll {
+        animation: sc 25s linear infinite;
+      }
+      @keyframes sc {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+      .btn-red { fill: #FF5F56; }
+      .btn-yellow { fill: #FFBD2E; }
+      .btn-green { fill: #27C93F; }
+    </style>
+    
+    <linearGradient id="tickerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="25%" stop-color="#06B6D4"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="75%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    
+    <clipPath id="tc"><rect x="150" y="4" width="690" height="32"/></clipPath>
+    
+    <linearGradient id="leftFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#030712" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rightFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#030712" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="5" y="2" width="850" height="36" class="ticker-bg"/>
+  
+  <!-- Mini macOS buttons -->
+  <circle cx="20" cy="20" r="3.5" class="btn-red"/>
+  <circle cx="30" cy="20" r="3.5" class="btn-yellow"/>
+  <circle cx="40" cy="20" r="3.5" class="btn-green"/>
+
+  <text x="60" y="23" class="tk-static">STATUS_FEED &gt;</text>
+  
+  <!-- Clipping context for the scroll text -->
+  <g clip-path="url(#tc)">
+    <g class="scroll">
+      <text x="150" y="23" class="tk" fill="url(#tickerGrad)">·  ANUVAB DAS  ·  IoT ENGINEER  ·  ROBOTICS  ·  FULL-STACK SYSTEMS  ·  KOLKATA, IN  ·  ESP32  ·  STM32  ·  RUST  ·  TAURI  ·  REACT NATIVE  ·  NEXT.JS  ·  YOLOv8  ·  FREE_RTOS  ·  PCB_DESIGN  ·  OPEN_FOR_COLLABS  ·  BUILDING_REAL_THINGS  ·  ANUVAB DAS  ·  IoT ENGINEER  ·  ROBOTICS  ·  FULL-STACK SYSTEMS  ·  KOLKATA, IN  ·  ESP32  ·  STM32  ·  RUST  ·  TAURI  ·  REACT NATIVE  ·  NEXT.JS  ·  YOLOv8  ·  FREE_RTOS  ·  PCB_DESIGN  ·  OPEN_FOR_COLLABS  ·  BUILDING_REAL_THINGS  ·</text>
+    </g>
+    
+    <!-- Fades on the edges of the text display area -->
+    <rect x="150" y="4" width="40" height="32" fill="url(#leftFade)"/>
+    <rect x="800" y="4" width="46" height="32" fill="url(#rightFade)"/>
   </g>
-</g>
 </svg>

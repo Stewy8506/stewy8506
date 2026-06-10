@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-020608?style=for-the-badge&logo=linkedin&logoColor=3B82F6&labelColor=020608)](https://www.linkedin.com/in/anv-dev/)&nbsp;&nbsp;[![Instagram](https://img.shields.io/badge/INSTAGRAM-020608?style=for-the-badge&logo=instagram&logoColor=3B82F6&labelColor=020608)](https://www.instagram.com/anv.vibes/)&nbsp;&nbsp;[![Email](https://img.shields.io/badge/EMAIL-020608?style=for-the-badge&logo=gmail&logoColor=3B82F6&labelColor=020608)](mailto:dasanuvab38@gmail.com)&nbsp;&nbsp;[![GitHub](https://img.shields.io/badge/GITHUB-020608?style=for-the-badge&logo=github&logoColor=3B82F6&labelColor=020608)](https://github.com/Stewy8506)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-030712?style=for-the-badge&logo=linkedin&logoColor=3B82F6&labelColor=030712)](https://www.linkedin.com/in/anv-dev/)&nbsp;&nbsp;[![Instagram](https://img.shields.io/badge/INSTAGRAM-030712?style=for-the-badge&logo=instagram&logoColor=3B82F6&labelColor=030712)](https://www.instagram.com/anv.vibes/)&nbsp;&nbsp;[![Email](https://img.shields.io/badge/EMAIL-030712?style=for-the-badge&logo=gmail&logoColor=3B82F6&labelColor=030712)](mailto:dasanuvab38@gmail.com)&nbsp;&nbsp;[![GitHub](https://img.shields.io/badge/GITHUB-030712?style=for-the-badge&logo=github&logoColor=3B82F6&labelColor=030712)](https://github.com/Stewy8506)
 
 </div>
 
@@ -17,38 +17,47 @@
 <td width="50%" valign="top">
 
 ```yaml
-# anuvab.config.yaml
-name:     "Anuvab Das"
-role:
-  - IoT & Robotics Engineer
-  - Full-Stack Developer
-  - PCB Designer
-location: "Kolkata, India 🇮🇳"
-status:   "actively building"
+# anuvab.config.yaml [v4.0]
+name: "Anuvab Das"
+role: "Full-Stack & Embedded Systems Developer"
 focus:
-  hardware:  ["ESP32", "Arduino", "KiCad"]
-  robotics:  ["ROS", "FreeRTOS", "BLE"]
-  frontend:  ["React", "Next.js", "Flutter"]
-  backend:   ["Node.js", "Firebase", "GCP"]
-  languages: ["C", "C++", "Python", "Dart"]
-  interests: ["IoT", "Robotics", "Embedded"]
+  hardware:
+    - MCU: ["ESP32", "ESP32-S3", "STM32F401"]
+    - Protocols: ["BLE", "I2S", "I2C", "DMA"]
+    - CAD: ["KiCad", "Custom PCB Design"]
+  systems:
+    - Languages: ["Rust", "C/C++", "Python"]
+    - Engine: ["Tauri v2", "oxc-parser", "Tree-Sitter"]
+  software:
+    - Frontend: ["React 19", "Next.js", "Zustand"]
+    - Mobile: ["React Native", "Expo v54"]
+    - Backend: ["FastAPI", "Node.js", "Firebase"]
+  ai_ml:
+    - Orchestration: ["Gemini API", "Local RAG"]
+    - Vision: ["YOLOv8 Computer Vision"]
 ```
 
 </td>
 <td width="50%" valign="top">
 
 ```text
-# skill_distribution.log  [v3.0]
+$ system_diagnostics --skills
 
-[C/C++      ] ████████████░░  80%  embedded
-[Flutter    ] ████████░░░░░░  55%  mobile
-[React      ] ██████░░░░░░░░  42%  web
-[Python/ML  ] █████░░░░░░░░░  35%  ml
-[PCB Design ] ████░░░░░░░░░░  28%  hardware
-[ROS        ] ███░░░░░░░░░░░  22%  robotics
+[EMBEDDED / DSP ] ████████████████████ 92%
+  ↳ STM32 DMA buffer loops, I2S DAC mixing
+  ↳ Sensor fusion, autonomous crash alert
+[FULL-STACK AI  ] ████████████████░░░░ 80%
+  ↳ Custom agentic tool routing
+  ↳ Multi-LLM load balancing & cost logs
+[SYSTEMS / RUST ] ██████████████░░░░░░ 70%
+  ↳ Native Tauri IPC & oxc-parser bindings
+  ↳ Real-time spatial AST visualisations
+[MOBILE / STATE ] ████████████░░░░░░░░ 60%
+  ↳ Custom native Expo alarms & modules
+  ↳ Real-time Firestore synchronization
 
-> 10+ shipped projects ·  hardware + software
-> currently building:  Smart Helmet v2.0
+Uptime: [LIVE]
+All systems operational.
 ```
 
 </td>
@@ -93,7 +102,7 @@ focus:
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=Stewy8506&theme=black-ice&background=020608&border=1e3a5f&stroke=1e3a5f&ring=3B82F6&fire=60A5FA&currStreakLabel=3B82F6&sideLabels=4b5563&dates=374151&currStreakNum=ffffff&sideNums=9ca3af"/>
+<img src="https://streak-stats.demolab.com?user=Stewy8506&theme=black-ice&background=030712&border=1f2937&stroke=1f2937&ring=3B82F6&fire=60A5FA&currStreakLabel=3B82F6&sideLabels=4b5563&dates=374151&currStreakNum=ffffff&sideNums=9ca3af"/>
 
 </div>
 
@@ -101,7 +110,7 @@ focus:
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Stewy8506&bg_color=020608&color=3B82F6&line=1e3a5f&point=3B82F6&area=true&area_color=0d1f3c&hide_border=false&border_color=1e3a5f&custom_title=commit+activity" width="96%"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Stewy8506&bg_color=030712&color=3B82F6&line=1e293b&point=3B82F6&area=true&area_color=0f172a&hide_border=false&border_color=1f2937&custom_title=commit+activity" width="96%"/>
 
 </div>
 

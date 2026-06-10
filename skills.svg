@@ -1,266 +1,258 @@
-<svg width="100%" viewBox="0 0 860 220" xmlns="http://www.w3.org/2000/svg">
-<defs>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+<svg width="100%" viewBox="0 0 860 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      
+      .window-bg {
+        fill: #030712;
+        stroke: #1f2937;
+        stroke-width: 1.5;
+        rx: 10px;
+      }
+      .window-header {
+        fill: #0f172a;
+        rx: 10px;
+      }
+      .window-title {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        fill: #9ca3af;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      
+      /* Network Nodes */
+      .core-node {
+        fill: #1e3a5f;
+        stroke: #3B82F6;
+        stroke-width: 2;
+      }
+      .skill-node {
+        fill: #0d1527;
+        stroke: #1e3a5f;
+        stroke-width: 1;
+        rx: 5px;
+      }
+      .skill-node-hot {
+        fill: #091d34;
+        stroke: #3B82F6;
+        stroke-width: 1.5;
+        rx: 5px;
+      }
+      .node-text {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9.5px;
+        fill: #e5e7eb;
+        font-weight: 700;
+      }
+      .node-text-hot {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9.5px;
+        fill: #60A5FA;
+        font-weight: 700;
+      }
+      .group-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        fill: #06B6D4;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+      }
 
-    .sl { font-family:'JetBrains Mono',monospace; font-size:9.5px; fill:#d1d5db; letter-spacing:0.5px; }
-    .sh { font-family:'JetBrains Mono',monospace; font-size:8px; fill:#60A5FA; letter-spacing:3px; }
-    .cat-label { font-family:'JetBrains Mono',monospace; font-size:9px; fill:#3B82F6; letter-spacing:2px; }
+      /* Connection Lines */
+      .conn-line {
+        stroke: #1e293b;
+        stroke-width: 1;
+        fill: none;
+      }
+      .conn-line-active {
+        stroke: #3B82F6;
+        stroke-width: 1.2;
+        fill: none;
+        stroke-dasharray: 5 5;
+        animation: flow 2s linear infinite;
+      }
+      @keyframes flow {
+        to { stroke-dashoffset: -20; }
+      }
 
-    /* Hex cell base */
-    .hex { fill:#06101a; stroke:#1e3a5f; stroke-width:0.8; }
-    .hex-active { fill:#060f1e; stroke:#3B82F6; stroke-width:1.2; }
-    .hex-dim { fill:#04080f; stroke:#0d1f3c; stroke-width:0.5; }
+      .btn-red { fill: #FF5F56; }
+      .btn-yellow { fill: #FFBD2E; }
+      .btn-green { fill: #27C93F; }
 
-    /* Dot indicators */
-    .dot-on { fill:#3B82F6; }
-    .dot-off { fill:#1e3a5f; }
-    .dot-glow {
-      fill:#60A5FA;
-      filter: url(#hexGlow);
-      animation: dotPulse 2.5s ease-in-out infinite;
-    }
-    @keyframes dotPulse { 0%,100%{opacity:0.4} 50%{opacity:1} }
+      /* Pulse animation */
+      .pulse-ring {
+        stroke: #3B82F6;
+        stroke-width: 1;
+        fill: none;
+        animation: pulse 3s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+      }
+      @keyframes pulse {
+        0% { r: 10; opacity: 1; }
+        100% { r: 30; opacity: 0; }
+      }
+    </style>
 
-    /* Staggered pop-in */
-    .h1  { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.00s; }
-    .h2  { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.06s; }
-    .h3  { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.12s; }
-    .h4  { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.18s; }
-    .h5  { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.24s; }
-    .h6  { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.30s; }
-    .h7  { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.36s; }
-    .h8  { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.42s; }
-    .h9  { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.48s; }
-    .h10 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.54s; }
-    .h11 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.60s; }
-    .h12 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.66s; }
-    .h13 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.72s; }
-    .h14 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.78s; }
-    .h15 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.84s; }
-    .h16 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.90s; }
-    .h17 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:0.96s; }
-    .h18 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:1.02s; }
-    .h19 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:1.08s; }
-    .h20 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:1.14s; }
-    .h21 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:1.20s; }
-    .h22 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:1.26s; }
-    .h23 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:1.32s; }
-    .h24 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:1.38s; }
-    .h25 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:1.44s; }
-    .h26 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:1.50s; }
-    .h27 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:1.56s; }
-    .h28 { animation: pop 0.35s ease forwards; opacity:0; animation-delay:1.62s; }
-    @keyframes pop {
-      from { opacity:0; transform: scale(0.6); }
-      to   { opacity:1; transform: scale(1); }
-    }
+    <linearGradient id="coreGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
 
-    .trace { stroke:#1e3a5f; stroke-width:0.5; fill:none; }
-  </style>
-  <filter id="hexGlow">
-    <feGaussianBlur stdDeviation="2" result="blur"/>
-    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <linearGradient id="hgBg" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#020608"/>
-    <stop offset="100%" stop-color="#060a10"/>
-  </linearGradient>
-</defs>
+  <!-- macOS Window Box -->
+  <rect x="5" y="5" width="850" height="290" rx="10" fill="#000" opacity="0.3"/>
+  <rect x="10" y="10" width="840" height="280" class="window-bg"/>
+  <path d="M 10 20 A 10 10 0 0 1 20 10 L 840 10 A 10 10 0 0 1 850 20 L 850 42 L 10 42 Z" class="window-header"/>
 
-<rect width="860" height="220" fill="url(#hgBg)"/>
+  <!-- Window Dots -->
+  <circle cx="28" cy="26" r="6" class="btn-red"/>
+  <circle cx="48" cy="26" r="6" class="btn-yellow"/>
+  <circle cx="68" cy="26" r="6" class="btn-green"/>
 
-<!-- Section header -->
-<text x="20" y="22" class="sh">~/TECH  STACK</text>
-<line x1="20" y1="30" x2="840" y2="30" class="trace"/>
+  <text x="430" y="30" class="window-title" text-anchor="middle">anuvab@macbook-pro-m3: ~/skills/schematic</text>
 
-<!-- ─────────────── ROW 1 — EMBEDDED ─────────────── -->
-<text x="20" y="56" class="cat-label">EMBEDDED</text>
+  <!-- Grid Background -->
+  <g opacity="0.15">
+    <line x1="50" y1="42" x2="50" y2="290" stroke="#1f2937"/>
+    <line x1="150" y1="42" x2="150" y2="290" stroke="#1f2937"/>
+    <line x1="250" y1="42" x2="250" y2="290" stroke="#1f2937"/>
+    <line x1="350" y1="42" x2="350" y2="290" stroke="#1f2937"/>
+    <line x1="450" y1="42" x2="450" y2="290" stroke="#1f2937"/>
+    <line x1="550" y1="42" x2="550" y2="290" stroke="#1f2937"/>
+    <line x1="650" y1="42" x2="650" y2="290" stroke="#1f2937"/>
+    <line x1="750" y1="42" x2="750" y2="290" stroke="#1f2937"/>
+  </g>
 
-<!-- ESP32 -->
-<g class="h1">
-  <rect x="108" y="40" width="78" height="24" rx="4" class="hex-active"/>
-  <circle cx="120" cy="52" r="3" class="dot-glow"/>
-  <text x="128" y="56" class="sl">ESP32</text>
-</g>
-<!-- Arduino -->
-<g class="h2">
-  <rect x="194" y="40" width="78" height="24" rx="4" class="hex"/>
-  <circle cx="206" cy="52" r="3" class="dot-off"/>
-  <text x="214" y="56" class="sl">Arduino</text>
-</g>
-<!-- FreeRTOS -->
-<g class="h3">
-  <rect x="280" y="40" width="84" height="24" rx="4" class="hex"/>
-  <circle cx="292" cy="52" r="3" class="dot-off"/>
-  <text x="300" y="56" class="sl">FreeRTOS</text>
-</g>
-<!-- KiCad -->
-<g class="h4">
-  <rect x="372" y="40" width="70" height="24" rx="4" class="hex"/>
-  <circle cx="384" cy="52" r="3" class="dot-off"/>
-  <text x="392" y="56" class="sl">KiCad</text>
-</g>
-<!-- ROS -->
-<g class="h5">
-  <rect x="450" y="40" width="60" height="24" rx="4" class="hex"/>
-  <circle cx="462" cy="52" r="3" class="dot-off"/>
-  <text x="470" y="56" class="sl">ROS</text>
-</g>
-<!-- ESP-IDF -->
-<g class="h6">
-  <rect x="518" y="40" width="74" height="24" rx="4" class="hex"/>
-  <circle cx="530" cy="52" r="3" class="dot-off"/>
-  <text x="538" y="56" class="sl">ESP-IDF</text>
-</g>
-<!-- BLE -->
-<g class="h7">
-  <rect x="600" y="40" width="52" height="24" rx="4" class="hex-dim"/>
-  <circle cx="612" cy="52" r="2" class="dot-off"/>
-  <text x="620" y="56" class="sl" style="fill:#4b5563">BLE</text>
-</g>
+  <!-- ================= CONNECTION PATHS ================= -->
+  <!-- Center to Clusters -->
+  <path d="M 430 160 L 220 105" class="conn-line-active"/>
+  <path d="M 430 160 L 640 105" class="conn-line-active"/>
+  <path d="M 430 160 L 240 215" class="conn-line-active"/>
+  <path d="M 430 160 L 620 215" class="conn-line-active"/>
 
-<!-- ─────────────── ROW 2 — FRONTEND ─────────────── -->
-<text x="20" y="90" class="cat-label">FRONTEND</text>
+  <!-- Cluster 1 (Embedded) internal links -->
+  <line x1="220" y1="105" x2="120" y2="75" class="conn-line"/>
+  <line x1="220" y1="105" x2="130" y2="135" class="conn-line"/>
+  <line x1="220" y1="105" x2="310" y2="75" class="conn-line"/>
+  <line x1="220" y1="105" x2="310" y2="135" class="conn-line"/>
 
-<!-- React -->
-<g class="h8">
-  <rect x="108" y="74" width="62" height="24" rx="4" class="hex-active"/>
-  <circle cx="120" cy="86" r="3" class="dot-glow" style="animation-delay:0.5s"/>
-  <text x="128" y="90" class="sl">React</text>
-</g>
-<!-- Next.js -->
-<g class="h9">
-  <rect x="178" y="74" width="70" height="24" rx="4" class="hex"/>
-  <circle cx="190" cy="86" r="3" class="dot-off"/>
-  <text x="198" y="90" class="sl">Next.js</text>
-</g>
-<!-- Flutter -->
-<g class="h10">
-  <rect x="256" y="74" width="72" height="24" rx="4" class="hex-active"/>
-  <circle cx="268" cy="86" r="3" class="dot-glow" style="animation-delay:1.0s"/>
-  <text x="276" y="90" class="sl">Flutter</text>
-</g>
-<!-- React Native -->
-<g class="h11">
-  <rect x="336" y="74" width="104" height="24" rx="4" class="hex"/>
-  <circle cx="348" cy="86" r="3" class="dot-off"/>
-  <text x="356" y="90" class="sl">React Native</text>
-</g>
-<!-- Figma -->
-<g class="h12">
-  <rect x="448" y="74" width="66" height="24" rx="4" class="hex"/>
-  <circle cx="460" cy="86" r="3" class="dot-off"/>
-  <text x="468" y="90" class="sl">Figma</text>
-</g>
-<!-- CSS3 -->
-<g class="h13">
-  <rect x="522" y="74" width="60" height="24" rx="4" class="hex-dim"/>
-  <circle cx="534" cy="86" r="2" class="dot-off"/>
-  <text x="542" y="90" class="sl" style="fill:#4b5563">CSS3</text>
-</g>
-<!-- TypeScript -->
-<g class="h14">
-  <rect x="590" y="74" width="90" height="24" rx="4" class="hex"/>
-  <circle cx="602" cy="86" r="3" class="dot-off"/>
-  <text x="610" y="90" class="sl">TypeScript</text>
-</g>
+  <!-- Cluster 2 (Systems) internal links -->
+  <line x1="640" y1="105" x2="550" y2="75" class="conn-line"/>
+  <line x1="640" y1="105" x2="550" y2="135" class="conn-line"/>
+  <line x1="640" y1="105" x2="740" y2="75" class="conn-line"/>
+  <line x1="640" y1="105" x2="730" y2="135" class="conn-line"/>
 
-<!-- ─────────────── ROW 3 — BACKEND ─────────────── -->
-<text x="20" y="124" class="cat-label">BACKEND</text>
+  <!-- Cluster 3 (Full-Stack/AI) internal links -->
+  <line x1="240" y1="215" x2="140" y2="185" class="conn-line"/>
+  <line x1="240" y1="215" x2="150" y2="245" class="conn-line"/>
+  <line x1="240" y1="215" x2="330" y2="185" class="conn-line"/>
+  <line x1="240" y1="215" x2="320" y2="245" class="conn-line"/>
 
-<!-- Node.js -->
-<g class="h15">
-  <rect x="108" y="108" width="72" height="24" rx="4" class="hex-active"/>
-  <circle cx="120" cy="120" r="3" class="dot-glow" style="animation-delay:1.5s"/>
-  <text x="128" y="124" class="sl">Node.js</text>
-</g>
-<!-- Firebase -->
-<g class="h16">
-  <rect x="188" y="108" width="76" height="24" rx="4" class="hex"/>
-  <circle cx="200" cy="120" r="3" class="dot-off"/>
-  <text x="208" y="124" class="sl">Firebase</text>
-</g>
-<!-- Supabase -->
-<g class="h17">
-  <rect x="272" y="108" width="80" height="24" rx="4" class="hex"/>
-  <circle cx="284" cy="120" r="3" class="dot-off"/>
-  <text x="292" y="124" class="sl">Supabase</text>
-</g>
-<!-- GCP -->
-<g class="h18">
-  <rect x="360" y="108" width="52" height="24" rx="4" class="hex"/>
-  <circle cx="372" cy="120" r="3" class="dot-off"/>
-  <text x="380" y="124" class="sl">GCP</text>
-</g>
-<!-- Docker -->
-<g class="h19">
-  <rect x="420" y="108" width="70" height="24" rx="4" class="hex"/>
-  <circle cx="432" cy="120" r="3" class="dot-off"/>
-  <text x="440" y="124" class="sl">Docker</text>
-</g>
-<!-- SQL -->
-<g class="h20">
-  <rect x="498" y="108" width="50" height="24" rx="4" class="hex-dim"/>
-  <circle cx="510" cy="120" r="2" class="dot-off"/>
-  <text x="518" y="124" class="sl" style="fill:#4b5563">SQL</text>
-</g>
+  <!-- Cluster 4 (Mobile/State) internal links -->
+  <line x1="620" y1="215" x2="530" y2="185" class="conn-line"/>
+  <line x1="620" y1="215" x2="520" y2="245" class="conn-line"/>
+  <line x1="620" y1="215" x2="710" y2="185" class="conn-line"/>
+  <line x1="620" y1="215" x2="720" y2="245" class="conn-line"/>
 
-<!-- ─────────────── ROW 4 — LANGUAGES ─────────────── -->
-<text x="20" y="158" class="cat-label">LANGUAGES</text>
+  <!-- ================= CORE NODE ================= -->
+  <circle cx="430" cy="160" r="16" class="pulse-ring"/>
+  <circle cx="430" cy="160" r="10" fill="url(#coreGrad)"/>
+  <text x="430" y="163" font-family="'JetBrains Mono', monospace" font-size="8" fill="#ffffff" font-weight="bold" text-anchor="middle">CORE</text>
 
-<!-- C -->
-<g class="h21">
-  <rect x="108" y="142" width="40" height="24" rx="4" class="hex-active"/>
-  <circle cx="120" cy="154" r="3" class="dot-glow" style="animation-delay:2.0s"/>
-  <text x="128" y="158" class="sl">C</text>
-</g>
-<!-- C++ -->
-<g class="h22">
-  <rect x="156" y="142" width="46" height="24" rx="4" class="hex-active"/>
-  <circle cx="168" cy="154" r="3" class="dot-glow" style="animation-delay:0.3s"/>
-  <text x="176" y="158" class="sl">C++</text>
-</g>
-<!-- Python -->
-<g class="h23">
-  <rect x="210" y="142" width="70" height="24" rx="4" class="hex"/>
-  <circle cx="222" cy="154" r="3" class="dot-off"/>
-  <text x="230" y="158" class="sl">Python</text>
-</g>
-<!-- Dart -->
-<g class="h24">
-  <rect x="288" y="142" width="52" height="24" rx="4" class="hex"/>
-  <circle cx="300" cy="154" r="3" class="dot-off"/>
-  <text x="308" y="158" class="sl">Dart</text>
-</g>
-<!-- Java -->
-<g class="h25">
-  <rect x="348" y="142" width="52" height="24" rx="4" class="hex-dim"/>
-  <circle cx="360" cy="154" r="2" class="dot-off"/>
-  <text x="368" y="158" class="sl" style="fill:#4b5563">Java</text>
-</g>
-<!-- YAML -->
-<g class="h26">
-  <rect x="408" y="142" width="52" height="24" rx="4" class="hex-dim"/>
-  <circle cx="420" cy="154" r="2" class="dot-off"/>
-  <text x="428" y="158" class="sl" style="fill:#4b5563">YAML</text>
-</g>
-<!-- JS -->
-<g class="h27">
-  <rect x="468" y="142" width="66" height="24" rx="4" class="hex"/>
-  <circle cx="480" cy="154" r="3" class="dot-off"/>
-  <text x="488" y="158" class="sl">JavaScript</text>
-</g>
+  <!-- ================= CLUSTER 1: EMBEDDED & ROBOTICS ================= -->
+  <text x="220" y="109" class="node-text-hot" text-anchor="middle">EMBEDDED</text>
+  
+  <!-- ESP32 -->
+  <g transform="translate(80, 63)">
+    <rect width="60" height="20" class="skill-node-hot"/>
+    <text x="30" y="13" class="node-text-hot" text-anchor="middle">ESP32</text>
+  </g>
+  <!-- FreeRTOS -->
+  <g transform="translate(85, 125)">
+    <rect width="75" height="20" class="skill-node"/>
+    <text x="37.5" y="13" class="node-text" text-anchor="middle">FreeRTOS</text>
+  </g>
+  <!-- STM32 HAL -->
+  <g transform="translate(270, 63)">
+    <rect width="70" height="20" class="skill-node-hot"/>
+    <text x="35" y="13" class="node-text-hot" text-anchor="middle">STM32 HAL</text>
+  </g>
+  <!-- ROS -->
+  <g transform="translate(275, 125)">
+    <rect width="55" height="20" class="skill-node"/>
+    <text x="27.5" y="13" class="node-text" text-anchor="middle">ROS</text>
+  </g>
 
-<!-- Right-side meta labels -->
-<text x="840" y="54" font-family="JetBrains Mono,monospace" font-size="8" fill="#1e3a5f" text-anchor="end">6 TOOLS</text>
-<text x="840" y="88" font-family="JetBrains Mono,monospace" font-size="8" fill="#1e3a5f" text-anchor="end">CROSS-PLATFORM</text>
-<text x="840" y="122" font-family="JetBrains Mono,monospace" font-size="8" fill="#1e3a5f" text-anchor="end">CLOUD-NATIVE</text>
-<text x="840" y="156" font-family="JetBrains Mono,monospace" font-size="8" fill="#1e3a5f" text-anchor="end">POLYGLOT</text>
+  <!-- ================= CLUSTER 2: SYSTEMS & COMPILATION ================= -->
+  <text x="640" y="109" class="node-text-hot" text-anchor="middle">SYSTEMS</text>
 
-<!-- Skill count summary -->
-<text x="20" y="196" font-family="JetBrains Mono,monospace" font-size="8" fill="#1e3a5f">28 TOOLS  //  4 DOMAINS  //  HARDWARE + SOFTWARE</text>
+  <!-- Rust -->
+  <g transform="translate(510, 63)">
+    <rect width="55" height="20" class="skill-node-hot"/>
+    <text x="27.5" y="13" class="node-text-hot" text-anchor="middle">Rust</text>
+  </g>
+  <!-- Tauri v2 -->
+  <g transform="translate(505, 125)">
+    <rect width="70" height="20" class="skill-node"/>
+    <text x="35" y="13" class="node-text" text-anchor="middle">Tauri v2</text>
+  </g>
+  <!-- AST Parsing -->
+  <g transform="translate(705, 63)">
+    <rect width="78" height="20" class="skill-node-hot"/>
+    <text x="39" y="13" class="node-text-hot" text-anchor="middle">AST Parsing</text>
+  </g>
+  <!-- C/C++ -->
+  <g transform="translate(700, 125)">
+    <rect width="55" height="20" class="skill-node"/>
+    <text x="27.5" y="13" class="node-text" text-anchor="middle">C/C++</text>
+  </g>
 
-<!-- Bottom divider -->
-<line x1="20" y1="208" x2="840" y2="208" class="trace"/>
+  <!-- ================= CLUSTER 3: FULL-STACK & AI ================= -->
+  <text x="240" y="219" class="node-text-hot" text-anchor="middle">WEB / AI</text>
+
+  <!-- Next.js -->
+  <g transform="translate(100, 175)">
+    <rect width="65" height="20" class="skill-node-hot"/>
+    <text x="32.5" y="13" class="node-text-hot" text-anchor="middle">Next.js</text>
+  </g>
+  <!-- FastAPI -->
+  <g transform="translate(105, 235)">
+    <rect width="65" height="20" class="skill-node"/>
+    <text x="32.5" y="13" class="node-text" text-anchor="middle">FastAPI</text>
+  </g>
+  <!-- LLM & RAG -->
+  <g transform="translate(290, 175)">
+    <rect width="70" height="20" class="skill-node-hot"/>
+    <text x="35" y="13" class="node-text-hot" text-anchor="middle">LLM / RAG</text>
+  </g>
+  <!-- Python -->
+  <g transform="translate(285, 235)">
+    <rect width="60" height="20" class="skill-node"/>
+    <text x="30" y="13" class="node-text" text-anchor="middle">Python</text>
+  </g>
+
+  <!-- ================= CLUSTER 4: MOBILE & STATE ================= -->
+  <text x="620" y="219" class="node-text-hot" text-anchor="middle">MOBILE</text>
+
+  <!-- React Native -->
+  <g transform="translate(485, 175)">
+    <rect width="85" height="20" class="skill-node-hot"/>
+    <text x="42.5" y="13" class="node-text-hot" text-anchor="middle">React Native</text>
+  </g>
+  <!-- Expo v54 -->
+  <g transform="translate(475, 235)">
+    <rect width="75" height="20" class="skill-node"/>
+    <text x="37.5" y="13" class="node-text" text-anchor="middle">Expo v54</text>
+  </g>
+  <!-- Zustand -->
+  <g transform="translate(670, 175)">
+    <rect width="65" height="20" class="skill-node-hot"/>
+    <text x="32.5" y="13" class="node-text-hot" text-anchor="middle">Zustand</text>
+  </g>
+  <!-- Firebase -->
+  <g transform="translate(680, 235)">
+    <rect width="65" height="20" class="skill-node"/>
+    <text x="32.5" y="13" class="node-text" text-anchor="middle">Firebase</text>
+  </g>
+
 </svg>
