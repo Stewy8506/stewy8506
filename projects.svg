@@ -87,10 +87,9 @@
         font-weight: bold;
       }
 
-      /* Entrance Animation */
+      /* Entrance Animation - Nested to prevent absolute translation conflict */
       .widget-group {
         opacity: 0;
-        transform: translateY(15px);
         animation: widgetSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       }
       .wg-1 { animation-delay: 0.05s; }
@@ -98,6 +97,7 @@
       .wg-3 { animation-delay: 0.31s; }
       .wg-4 { animation-delay: 0.44s; }
       @keyframes widgetSlideUp {
+        from { opacity: 0; transform: translateY(15px); }
         to { opacity: 1; transform: translateY(0); }
       }
 
@@ -159,183 +159,181 @@
 
   <!-- ================= PROJECT 1: SMART HELMET SYSTEM ================= -->
   <a href="https://github.com/Stewy8506/Smart-Helmet-System" target="_blank" class="proj-link">
-    <g class="widget-group wg-1" transform="translate(20, 42)">
-      <rect width="195" height="275" class="glass-card-hot" fill="url(#cardBg)"/>
-      
-      <!-- Icon (Custom Circuit Helmet Schematic symbol) -->
-      <g class="card-icon" transform="translate(15, 15)">
-        <rect width="36" height="36" rx="10" fill="url(#gradGreen)"/>
-        <!-- Custom visual details on the icon -->
-        <circle cx="18" cy="18" r="9" fill="none" stroke="#ffffff" stroke-width="1.8"/>
-        <line x1="18" y1="9" x2="18" y2="27" stroke="#ffffff" stroke-width="1.8"/>
-        <line x1="9" y1="18" x2="27" y2="18" stroke="#ffffff" stroke-width="1.8"/>
-      </g>
-
-      <g transform="translate(15, 70)">
-        <text x="0" y="10" class="proj-title">Smart Helmet</text>
-        <text x="0" y="22" class="proj-stack">ESP32 · STM32 · CV</text>
+    <g transform="translate(20, 42)">
+      <g class="widget-group wg-1">
+        <rect width="195" height="275" class="glass-card-hot" fill="url(#cardBg)"/>
         
-        <!-- Divider -->
-        <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+        <!-- Icon -->
+        <g class="card-icon" transform="translate(15, 15)">
+          <rect width="36" height="36" rx="10" fill="url(#gradGreen)"/>
+          <circle cx="18" cy="18" r="9" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+          <line x1="18" y1="9" x2="18" y2="27" stroke="#ffffff" stroke-width="1.8"/>
+          <line x1="9" y1="18" x2="27" y2="18" stroke="#ffffff" stroke-width="1.8"/>
+        </g>
 
-        <!-- Project description -->
-        <text x="0" y="46" class="txt-mono">Distributed real-time IoT</text>
-        <text x="0" y="58" class="txt-mono">riding safety system. Multi-</text>
-        <text x="0" y="70" class="txt-mono">MCU data processing, ANC</text>
-        <text x="0" y="82" class="txt-mono">DSP mixing, and YOLOv8</text>
-        <text x="0" y="94" class="txt-mono">ADAS collision warning.</text>
+        <g transform="translate(15, 70)">
+          <text x="0" y="10" class="proj-title">Smart Helmet</text>
+          <text x="0" y="22" class="proj-stack">ESP32 · STM32 · CV</text>
+          
+          <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <!-- Divider -->
-        <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <text x="0" y="46" class="txt-mono">Distributed real-time IoT</text>
+          <text x="0" y="58" class="txt-mono">riding safety system. Multi-</text>
+          <text x="0" y="70" class="txt-mono">MCU data processing, ANC</text>
+          <text x="0" y="82" class="txt-mono">DSP mixing, and YOLOv8</text>
+          <text x="0" y="94" class="txt-mono">ADAS collision warning.</text>
 
-        <!-- Progress stats -->
-        <text x="0" y="120" class="txt-italic">Active telemetry module</text>
-        <text x="0" y="132" class="txt-italic">100Hz IMU sensor fusion</text>
-        
-        <rect x="0" y="145" width="125" height="5" class="slider-track"/>
-        <rect x="0" y="145" width="112" height="5" class="slider-fill-green"/>
-        <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#10B981" font-weight="bold">90%</text>
+          <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <!-- Divider -->
-        <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <text x="0" y="120" class="txt-italic">Active telemetry module</text>
+          <text x="0" y="132" class="txt-italic">100Hz IMU sensor fusion</text>
+          
+          <rect x="0" y="145" width="125" height="5" class="slider-track"/>
+          <rect x="0" y="145" width="112" height="5" class="slider-fill-green"/>
+          <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#10B981" font-weight="bold">90%</text>
 
-        <!-- Status -->
-        <circle cx="5" cy="180" r="4.5" class="pulse-green"/>
-        <text x="16" y="183" class="status-lbl" fill="#10B981">● ACTIVE DEV</text>
+          <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+
+          <circle cx="5" cy="180" r="4.5" class="pulse-green"/>
+          <text x="16" y="183" class="status-lbl" fill="#10B981">● ACTIVE DEV</text>
+        </g>
       </g>
     </g>
   </a>
 
   <!-- ================= PROJECT 2: AI WORKSPACE ================= -->
   <a href="https://github.com/Stewy8506/AI-App" target="_blank" class="proj-link">
-    <g class="widget-group wg-2" transform="translate(225, 42)">
-      <rect width="195" height="275" class="glass-card" fill="url(#cardBg)"/>
-      
-      <!-- Icon -->
-      <g class="card-icon" transform="translate(15, 15)">
-        <rect width="36" height="36" rx="10" fill="url(#gradBlue)"/>
-        <!-- Custom brain/network graphic details -->
-        <circle cx="18" cy="18" r="4" fill="#ffffff"/>
-        <line x1="18" y1="18" x2="10" y2="10" stroke="#ffffff" stroke-width="1.5"/>
-        <line x1="18" y1="18" x2="26" y2="10" stroke="#ffffff" stroke-width="1.5"/>
-        <line x1="18" y1="18" x2="18" y2="28" stroke="#ffffff" stroke-width="1.5"/>
-        <circle cx="10" cy="10" r="2.5" fill="#ffffff"/>
-        <circle cx="26" cy="10" r="2.5" fill="#ffffff"/>
-        <circle cx="18" cy="28" r="2.5" fill="#ffffff"/>
-      </g>
-
-      <g transform="translate(15, 70)">
-        <text x="0" y="10" class="proj-title">AI Workspace</text>
-        <text x="0" y="22" class="proj-stack">NEXT.JS · FASTAPI</text>
+    <g transform="translate(225, 42)">
+      <g class="widget-group wg-2">
+        <rect width="195" height="275" class="glass-card" fill="url(#cardBg)"/>
         
-        <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+        <!-- Icon -->
+        <g class="card-icon" transform="translate(15, 15)">
+          <rect width="36" height="36" rx="10" fill="url(#gradBlue)"/>
+          <circle cx="18" cy="18" r="4" fill="#ffffff"/>
+          <line x1="18" y1="18" x2="10" y2="10" stroke="#ffffff" stroke-width="1.5"/>
+          <line x1="18" y1="18" x2="26" y2="10" stroke="#ffffff" stroke-width="1.5"/>
+          <line x1="18" y1="18" x2="18" y2="28" stroke="#ffffff" stroke-width="1.5"/>
+          <circle cx="10" cy="10" r="2.5" fill="#ffffff"/>
+          <circle cx="26" cy="10" r="2.5" fill="#ffffff"/>
+          <circle cx="18" cy="28" r="2.5" fill="#ffffff"/>
+        </g>
 
-        <text x="0" y="46" class="txt-mono">Self-hosted multi-LLM AI</text>
-        <text x="0" y="58" class="txt-mono">workspace. Custom prompt</text>
-        <text x="0" y="70" class="txt-mono">chain routing, local vector</text>
-        <text x="0" y="82" class="txt-mono">RAG database, cost logs,</text>
-        <text x="0" y="94" class="txt-mono">and Python sandbox environments.</text>
+        <g transform="translate(15, 70)">
+          <text x="0" y="10" class="proj-title">AI Workspace</text>
+          <text x="0" y="22" class="proj-stack">NEXT.JS · FASTAPI</text>
+          
+          <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <text x="0" y="46" class="txt-mono">Self-hosted multi-LLM AI</text>
+          <text x="0" y="58" class="txt-mono">workspace. Custom prompt</text>
+          <text x="0" y="70" class="txt-mono">chain routing, local vector</text>
+          <text x="0" y="82" class="txt-mono">rag database, cost logs,</text>
+          <text x="0" y="94" class="txt-mono">and Python sandbox environments.</text>
 
-        <text x="0" y="120" class="txt-italic">Universal API routing</text>
-        <text x="0" y="132" class="txt-italic">Model battle &amp; Elo stats</text>
-        
-        <rect x="0" y="145" width="125" height="5" class="slider-track"/>
-        <rect x="0" y="145" width="100" height="5" class="slider-fill-blue"/>
-        <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#3B82F6" font-weight="bold">80%</text>
+          <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <text x="0" y="120" class="txt-italic">Universal API routing</text>
+          <text x="0" y="132" class="txt-italic">Model battle &amp; Elo stats</text>
+          
+          <rect x="0" y="145" width="125" height="5" class="slider-track"/>
+          <rect x="0" y="145" width="100" height="5" class="slider-fill-blue"/>
+          <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#3B82F6" font-weight="bold">80%</text>
 
-        <circle cx="5" cy="180" r="4.5" class="pulse-green"/>
-        <text x="16" y="183" class="status-lbl" fill="#10B981">● ACTIVE DEV</text>
+          <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+
+          <circle cx="5" cy="180" r="4.5" class="pulse-green"/>
+          <text x="16" y="183" class="status-lbl" fill="#10B981">● ACTIVE DEV</text>
+        </g>
       </g>
     </g>
   </a>
 
   <!-- ================= PROJECT 3: DATAFLOW VISUALISER ================= -->
   <a href="https://github.com/Stewy8506/Repository-Visualiser" target="_blank" class="proj-link">
-    <g class="widget-group wg-3" transform="translate(430, 42)">
-      <rect width="195" height="275" class="glass-card" fill="url(#cardBg)"/>
-      
-      <!-- Icon -->
-      <g class="card-icon" transform="translate(15, 15)">
-        <rect width="36" height="36" rx="10" fill="url(#gradRed)"/>
-        <!-- Custom graph graphic details -->
-        <circle cx="12" cy="14" r="3" fill="#ffffff"/>
-        <circle cx="24" cy="14" r="3" fill="#ffffff"/>
-        <circle cx="18" cy="24" r="3" fill="#ffffff"/>
-        <line x1="12" y1="14" x2="24" y2="14" stroke="#ffffff" stroke-width="1.2"/>
-        <line x1="12" y1="14" x2="18" y2="24" stroke="#ffffff" stroke-width="1.2"/>
-        <line x1="24" y1="14" x2="18" y2="24" stroke="#ffffff" stroke-width="1.2"/>
-      </g>
-
-      <g transform="translate(15, 70)">
-        <text x="0" y="10" class="proj-title">Dataflow Visualiser</text>
-        <text x="0" y="22" class="proj-stack">RUST · TAURI · REACT</text>
+    <g transform="translate(430, 42)">
+      <g class="widget-group wg-3">
+        <rect width="195" height="275" class="glass-card" fill="url(#cardBg)"/>
         
-        <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+        <!-- Icon -->
+        <g class="card-icon" transform="translate(15, 15)">
+          <rect width="36" height="36" rx="10" fill="url(#gradRed)"/>
+          <circle cx="12" cy="14" r="3" fill="#ffffff"/>
+          <circle cx="24" cy="14" r="3" fill="#ffffff"/>
+          <circle cx="18" cy="24" r="3" fill="#ffffff"/>
+          <line x1="12" y1="14" x2="24" y2="14" stroke="#ffffff" stroke-width="1.2"/>
+          <line x1="12" y1="14" x2="18" y2="24" stroke="#ffffff" stroke-width="1.2"/>
+          <line x1="24" y1="14" x2="18" y2="24" stroke="#ffffff" stroke-width="1.2"/>
+        </g>
 
-        <text x="0" y="46" class="txt-mono">High-performance desktop AST</text>
-        <text x="0" y="58" class="txt-mono">dependency graph mapper.</text>
-        <text x="0" y="70" class="txt-mono">Traces local import edges,</text>
-        <text x="0" y="82" class="txt-mono">predicts refactor blast</text>
-        <text x="0" y="94" class="txt-mono">radii with AI refactor tools.</text>
+        <g transform="translate(15, 70)">
+          <text x="0" y="10" class="proj-title">Dataflow Visualiser</text>
+          <text x="0" y="22" class="proj-stack">RUST · TAURI · REACT</text>
+          
+          <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <text x="0" y="46" class="txt-mono">High-performance desktop AST</text>
+          <text x="0" y="58" class="txt-mono">dependency graph mapper.</text>
+          <text x="0" y="70" class="txt-mono">Traces local import edges,</text>
+          <text x="0" y="82" class="txt-mono">predicts refactor blast</text>
+          <text x="0" y="94" class="txt-mono">radii with AI refactor tools.</text>
 
-        <text x="0" y="120" class="txt-italic">oxc-parser AST parsing</text>
-        <text x="0" y="132" class="txt-italic">2D/3D force canvas</text>
-        
-        <rect x="0" y="145" width="125" height="5" class="slider-track"/>
-        <rect x="0" y="145" width="118" height="5" class="slider-fill-green"/>
-        <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#10B981" font-weight="bold">95%</text>
+          <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <text x="0" y="120" class="txt-italic">oxc-parser AST parsing</text>
+          <text x="0" y="132" class="txt-italic">2D/3D force canvas</text>
+          
+          <rect x="0" y="145" width="125" height="5" class="slider-track"/>
+          <rect x="0" y="145" width="118" height="5" class="slider-fill-green"/>
+          <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#10B981" font-weight="bold">95%</text>
 
-        <circle cx="5" cy="180" r="4.5" class="pulse-orange"/>
-        <text x="16" y="183" class="status-lbl" fill="#F59E0B">● NEAR RELEASE</text>
+          <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+
+          <circle cx="5" cy="180" r="4.5" class="pulse-orange"/>
+          <text x="16" y="183" class="status-lbl" fill="#F59E0B">● NEAR RELEASE</text>
+        </g>
       </g>
     </g>
   </a>
 
   <!-- ================= PROJECT 4: MOMENTUM TRACKER ================= -->
   <a href="https://github.com/Stewy8506/RN-Habit-Tracker" target="_blank" class="proj-link">
-    <g class="widget-group wg-4" transform="translate(635, 42)">
-      <rect width="195" height="275" class="glass-card" fill="url(#cardBg)"/>
-      
-      <!-- Icon -->
-      <g class="card-icon" transform="translate(15, 15)">
-        <rect width="36" height="36" rx="10" fill="url(#gradPurple)"/>
-        <!-- Custom checkmark flame graphic details -->
-        <path d="M 11 19 L 16 23 L 26 12" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-
-      <g transform="translate(15, 70)">
-        <text x="0" y="10" class="proj-title">Momentum Tracker</text>
-        <text x="0" y="22" class="proj-stack">RN · EXPO · ZUSTAND</text>
+    <g transform="translate(635, 42)">
+      <g class="widget-group wg-4">
+        <rect width="195" height="275" class="glass-card" fill="url(#cardBg)"/>
         
-        <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+        <!-- Icon -->
+        <g class="card-icon" transform="translate(15, 15)">
+          <rect width="36" height="36" rx="10" fill="url(#gradPurple)"/>
+          <path d="M 11 19 L 16 23 L 26 12" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
 
-        <text x="0" y="46" class="txt-mono">Productivity habit application</text>
-        <text x="0" y="58" class="txt-mono">featuring modern dual-shadow</text>
-        <text x="0" y="70" class="txt-mono">neumorphic designs, focus DND</text>
-        <text x="0" y="82" class="txt-mono">native timers, alarms,</text>
-        <text x="0" y="94" class="txt-mono">and group lobby chats.</text>
+        <g transform="translate(15, 70)">
+          <text x="0" y="10" class="proj-title">Momentum Tracker</text>
+          <text x="0" y="22" class="proj-stack">RN · EXPO · ZUSTAND</text>
+          
+          <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <text x="0" y="46" class="txt-mono">Productivity habit application</text>
+          <text x="0" y="58" class="txt-mono">featuring modern dual-shadow</text>
+          <text x="0" y="70" class="txt-mono">neumorphic designs, focus DND</text>
+          <text x="0" y="82" class="txt-mono">native timers, alarms,</text>
+          <text x="0" y="94" class="txt-mono">and group lobby chats.</text>
 
-        <text x="0" y="120" class="txt-italic">Custom DND system module</text>
-        <text x="0" y="132" class="txt-italic">Firestore sync listeners</text>
-        
-        <rect x="0" y="145" width="125" height="5" class="slider-track"/>
-        <rect x="0" y="145" width="100" height="5" class="slider-fill-purple"/>
-        <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#8B5CF6" font-weight="bold">80%</text>
+          <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+          <text x="0" y="120" class="txt-italic">Custom DND system module</text>
+          <text x="0" y="132" class="txt-italic">Firestore sync listeners</text>
+          
+          <rect x="0" y="145" width="125" height="5" class="slider-track"/>
+          <rect x="0" y="145" width="100" height="5" class="slider-fill-purple"/>
+          <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#8B5CF6" font-weight="bold">80%</text>
 
-        <circle cx="5" cy="180" r="4.5" class="pulse-green"/>
-        <text x="16" y="183" class="status-lbl" fill="#10B981">● ACTIVE DEV</text>
+          <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
+
+          <circle cx="5" cy="180" r="4.5" class="pulse-green"/>
+          <text x="16" y="183" class="status-lbl" fill="#10B981">● ACTIVE DEV</text>
+        </g>
       </g>
     </g>
   </a>
