@@ -1,340 +1,341 @@
-<svg width="100%" viewBox="0 0 860 330" xmlns="http://www.w3.org/2000/svg">
+<svg width="100%" viewBox="0 0 860 340" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
       
-      .window-bg {
-        fill: #030712;
-        stroke: #1f2937;
-        stroke-width: 1.2;
-        rx: 8px;
-        transition: all 0.3s ease;
+      .proj-title {
+        font-family: 'Outfit', sans-serif;
+        font-size: 13.5px;
+        font-weight: 800;
+        fill: #ffffff;
+        letter-spacing: 0.5px;
       }
-      .window-bg-hot {
-        fill: #040d21;
-        stroke: #3B82F6;
-        stroke-width: 1.5;
-        rx: 8px;
-      }
-      .window-header {
-        fill: #0f172a;
-        rx: 8px;
-      }
-      .window-header-hot {
-        fill: #0d1e36;
-        rx: 8px;
-      }
-      .window-title {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 9px;
-        fill: #9ca3af;
-        font-weight: bold;
-      }
-      .window-title-hot {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 9px;
-        fill: #60A5FA;
-        font-weight: bold;
-      }
-      .btn-red { fill: #FF5F56; }
-      .btn-yellow { fill: #FFBD2E; }
-      .btn-green { fill: #27C93F; }
-      
-      .btn-dim { fill: #1f2937; }
-
-      .p-tag {
+      .proj-stack {
         font-family: 'JetBrains Mono', monospace;
         font-size: 8px;
         fill: #06B6D4;
-        font-weight: bold;
-        letter-spacing: 1px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
       }
-      .p-title {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 12px;
-        fill: #ffffff;
-        font-weight: bold;
-      }
-      .p-sub {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 8px;
-        fill: #6b7280;
-      }
-      .p-desc {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 8px;
-        fill: #9ca3af;
-      }
-      .prompt {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 8px;
-        fill: #10B981;
-        font-weight: bold;
-      }
-      .cmd {
+      .txt-mono {
         font-family: 'JetBrains Mono', monospace;
         font-size: 8.5px;
-        fill: #d1d5db;
+        fill: #9ca3af;
+      }
+      .txt-italic {
+        font-family: 'JetBrains Mono', monospace;
+        font-style: italic;
+        fill: #6b7280;
       }
       
-      /* Links and hover styles */
-      .card-link {
+      /* Glass Card Widget Styles */
+      .glass-card {
+        fill: #ffffff;
+        fill-opacity: 0.02;
+        stroke: #ffffff;
+        stroke-opacity: 0.06;
+        stroke-width: 1.2;
+        rx: 16px;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      }
+      .glass-card-hot {
+        fill: #ffffff;
+        fill-opacity: 0.035;
+        stroke: #3B82F6;
+        stroke-opacity: 0.2;
+        stroke-width: 1.5;
+        rx: 16px;
+      }
+      
+      /* Hover highlights */
+      .proj-link {
         text-decoration: none;
         cursor: pointer;
       }
-      .card-link:hover .window-bg {
+      .proj-link:hover .glass-card {
+        fill-opacity: 0.05;
         stroke: #3B82F6;
-        fill: #040d21;
+        stroke-opacity: 0.35;
       }
-      .card-link:hover .window-header {
-        fill: #0d1e36;
-      }
-      .card-link:hover .window-title {
-        fill: #60A5FA;
+      .proj-link:hover .card-icon {
+        transform: scale(1.1) translateY(-2px);
       }
 
-      /* Animated indicator dots */
-      .status-pulse-green {
+      /* Icons and Accents */
+      .card-icon {
+        transition: all 0.3s ease;
+        transform-origin: 35px 35px;
+      }
+
+      /* Animated Pulsing status rings */
+      .pulse-green {
         fill: #10B981;
-        animation: pulseGreen 2s infinite;
+        animation: activePulse 2s infinite;
       }
-      @keyframes pulseGreen {
-        0%, 100% { opacity: 0.6; }
-        50% { opacity: 1; }
-      }
-      
-      .status-pulse-orange {
+      .pulse-orange {
         fill: #F59E0B;
-        animation: pulseOrange 2.5s infinite;
+        animation: activePulse 2.5s infinite;
       }
-      @keyframes pulseOrange {
+      @keyframes activePulse {
         0%, 100% { opacity: 0.6; }
         50% { opacity: 1; }
       }
 
-      .status-text {
+      .status-lbl {
         font-family: 'JetBrains Mono', monospace;
         font-size: 7.5px;
         font-weight: bold;
       }
 
       /* Entrance Animation */
-      .card-g {
+      .widget-group {
         opacity: 0;
         transform: translateY(15px);
-        animation: cardSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        animation: widgetSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       }
-      .cg-1 { animation-delay: 0.1s; }
-      .cg-2 { animation-delay: 0.25s; }
-      .cg-3 { animation-delay: 0.4s; }
-      .cg-4 { animation-delay: 0.55s; }
-      @keyframes cardSlideUp {
+      .wg-1 { animation-delay: 0.05s; }
+      .wg-2 { animation-delay: 0.18s; }
+      .wg-3 { animation-delay: 0.31s; }
+      .wg-4 { animation-delay: 0.44s; }
+      @keyframes widgetSlideUp {
         to { opacity: 1; transform: translateY(0); }
       }
+
+      /* Progress Bar Slider */
+      .slider-track {
+        fill: #1e293b;
+        fill-opacity: 0.5;
+        rx: 3px;
+      }
+      .slider-fill-green { fill: #10B981; }
+      .slider-fill-blue { fill: #3B82F6; }
+      .slider-fill-purple { fill: #8B5CF6; }
+
+      .bg-glow {
+        filter: url(#orbGlow);
+        opacity: 0.07;
+      }
     </style>
+
+    <filter id="orbGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" />
+    </filter>
+
+    <!-- Gradient Fills for Icons -->
+    <linearGradient id="gradGreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="gradBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="gradRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="gradPurple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.00"/>
+    </linearGradient>
   </defs>
 
-  <!-- Section Title -->
-  <text x="20" y="22" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#3B82F6" font-weight="bold" letter-spacing="3px">~/PROJECTS</text>
-  <line x1="20" y1="30" x2="840" y2="30" stroke="#1f2937" stroke-width="1"/>
+  <!-- Pitch Dark Background -->
+  <rect width="860" height="340" fill="#020205"/>
+
+  <!-- Background highlights behind widgets -->
+  <circle cx="120" cy="170" r="70" class="bg-glow" fill="#10B981"/>
+  <circle cx="325" cy="170" r="70" class="bg-glow" fill="#3B82F6"/>
+  <circle cx="530" cy="170" r="70" class="bg-glow" fill="#EF4444"/>
+  <circle cx="735" cy="170" r="70" class="bg-glow" fill="#8B5CF6"/>
+
+  <text x="20" y="22" font-family="'Outfit', sans-serif" font-size="10" fill="#3B82F6" font-weight="bold" letter-spacing="3px">~/PROJECTS</text>
+  <line x1="20" y1="30" x2="840" y2="30" stroke="#1f2937" stroke-width="0.8"/>
 
   <!-- ================= PROJECT 1: SMART HELMET SYSTEM ================= -->
-  <a href="https://github.com/Stewy8506/Smart-Helmet-System" target="_blank" class="card-link">
-    <g class="card-g cg-1" transform="translate(10, 42)">
-      <rect width="200" height="268" class="window-bg-hot"/>
-      <path d="M 0 8 A 8 8 0 0 1 8 0 L 192 0 A 8 8 0 0 1 200 8 L 200 24 L 0 24 Z" class="window-header-hot"/>
+  <a href="https://github.com/Stewy8506/Smart-Helmet-System" target="_blank" class="proj-link">
+    <g class="widget-group wg-1" transform="translate(20, 42)">
+      <rect width="195" height="275" class="glass-card-hot" fill="url(#cardBg)"/>
       
-      <!-- OS Window Controls -->
-      <circle cx="16" cy="12" r="4" class="btn-red"/>
-      <circle cx="28" cy="12" r="4" class="btn-yellow"/>
-      <circle cx="40" cy="12" r="4" class="btn-green"/>
-      <text x="100" y="15" class="window-title-hot" text-anchor="middle">smart-helmet.elf</text>
+      <!-- Icon (Custom Circuit Helmet Schematic symbol) -->
+      <g class="card-icon" transform="translate(15, 15)">
+        <rect width="36" height="36" rx="10" fill="url(#gradGreen)"/>
+        <!-- Custom visual details on the icon -->
+        <circle cx="18" cy="18" r="9" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+        <line x1="18" y1="9" x2="18" y2="27" stroke="#ffffff" stroke-width="1.8"/>
+        <line x1="9" y1="18" x2="27" y2="18" stroke="#ffffff" stroke-width="1.8"/>
+      </g>
 
-      <!-- Terminal content -->
-      <g transform="translate(15, 42)">
-        <text x="0" y="10" class="p-tag">EMBEDDED / DSP</text>
-        <text x="0" y="26" class="p-title">Smart Helmet</text>
-        <text x="0" y="38" class="p-title">System</text>
+      <g transform="translate(15, 70)">
+        <text x="0" y="10" class="proj-title">Smart Helmet</text>
+        <text x="0" y="22" class="proj-stack">ESP32 · STM32 · CV</text>
         
-        <line x1="0" y1="46" x2="170" y2="46" stroke="#1e293b" stroke-width="1"/>
+        <!-- Divider -->
+        <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <!-- Logs / Diagnostics -->
-        <text x="0" y="60" class="prompt">$</text>
-        <text x="12" y="60" class="cmd">build --target=esp32</text>
-        <text x="0" y="74" class="prompt">$</text>
-        <text x="12" y="74" class="cmd">mcu_mix_engine_init()</text>
-        <text x="0" y="88" class="prompt">$</text>
-        <text x="12" y="88" class="cmd">yolov8_adas_run</text>
+        <!-- Project description -->
+        <text x="0" y="46" class="txt-mono">Distributed real-time IoT</text>
+        <text x="0" y="58" class="txt-mono">riding safety system. Multi-</text>
+        <text x="0" y="70" class="txt-mono">MCU data processing, ANC</text>
+        <text x="0" y="82" class="txt-mono">DSP mixing, and YOLOv8</text>
+        <text x="0" y="94" class="txt-mono">ADAS collision warning.</text>
 
-        <line x1="0" y1="98" x2="170" y2="98" stroke="#1e293b" stroke-width="1"/>
+        <!-- Divider -->
+        <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <!-- Details -->
-        <text x="0" y="112" class="p-desc">Multi-MCU distributed riding</text>
-        <text x="0" y="124" class="p-desc">safety node. Integrates DSP</text>
-        <text x="0" y="136" class="p-desc">audio mixing, ANC, and edge</text>
-        <text x="0" y="148" class="p-desc">AI collision warnings.</text>
+        <!-- Progress stats -->
+        <text x="0" y="120" class="txt-italic">Active telemetry module</text>
+        <text x="0" y="132" class="txt-italic">100Hz IMU sensor fusion</text>
         
-        <line x1="0" y1="160" x2="170" y2="160" stroke="#1e293b" stroke-width="1"/>
+        <rect x="0" y="145" width="125" height="5" class="slider-track"/>
+        <rect x="0" y="145" width="112" height="5" class="slider-fill-green"/>
+        <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#10B981" font-weight="bold">90%</text>
 
-        <text x="0" y="174" class="p-sub">DSP: STM32F401 (DMA, I2S)</text>
-        <text x="0" y="186" class="p-sub">SAFETY: ESP32-S3 (IMU Fusion)</text>
-        <text x="0" y="198" class="p-sub">AI: YOLOv8 Computer Vision</text>
-
-        <line x1="0" y1="208" x2="170" y2="208" stroke="#1e293b" stroke-width="1"/>
+        <!-- Divider -->
+        <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
         <!-- Status -->
-        <circle cx="6" cy="218" r="4.5" class="status-pulse-green"/>
-        <text x="18" y="221" class="status-text" fill="#10B981">● ACTIVE DEV</text>
+        <circle cx="5" cy="180" r="4.5" class="pulse-green"/>
+        <text x="16" y="183" class="status-lbl" fill="#10B981">● ACTIVE DEV</text>
       </g>
     </g>
   </a>
 
   <!-- ================= PROJECT 2: AI WORKSPACE ================= -->
-  <a href="https://github.com/Stewy8506/AI-App" target="_blank" class="card-link">
-    <g class="card-g cg-2" transform="translate(222, 42)">
-      <rect width="200" height="268" class="window-bg"/>
-      <path d="M 0 8 A 8 8 0 0 1 8 0 L 192 0 A 8 8 0 0 1 200 8 L 200 24 L 0 24 Z" class="window-header"/>
+  <a href="https://github.com/Stewy8506/AI-App" target="_blank" class="proj-link">
+    <g class="widget-group wg-2" transform="translate(225, 42)">
+      <rect width="195" height="275" class="glass-card" fill="url(#cardBg)"/>
       
-      <!-- OS Window Controls -->
-      <circle cx="16" cy="12" r="4" class="btn-red"/>
-      <circle cx="28" cy="12" r="4" class="btn-yellow"/>
-      <circle cx="40" cy="12" r="4" class="btn-green"/>
-      <text x="100" y="15" class="window-title" text-anchor="middle">ai-workspace</text>
+      <!-- Icon -->
+      <g class="card-icon" transform="translate(15, 15)">
+        <rect width="36" height="36" rx="10" fill="url(#gradBlue)"/>
+        <!-- Custom brain/network graphic details -->
+        <circle cx="18" cy="18" r="4" fill="#ffffff"/>
+        <line x1="18" y1="18" x2="10" y2="10" stroke="#ffffff" stroke-width="1.5"/>
+        <line x1="18" y1="18" x2="26" y2="10" stroke="#ffffff" stroke-width="1.5"/>
+        <line x1="18" y1="18" x2="18" y2="28" stroke="#ffffff" stroke-width="1.5"/>
+        <circle cx="10" cy="10" r="2.5" fill="#ffffff"/>
+        <circle cx="26" cy="10" r="2.5" fill="#ffffff"/>
+        <circle cx="18" cy="28" r="2.5" fill="#ffffff"/>
+      </g>
 
-      <!-- Terminal content -->
-      <g transform="translate(15, 42)">
-        <text x="0" y="10" class="p-tag">FULL-STACK / AI</text>
-        <text x="0" y="26" class="p-title">AI Workspace</text>
-        <text x="0" y="38" class="p-title">(AI-App)</text>
+      <g transform="translate(15, 70)">
+        <text x="0" y="10" class="proj-title">AI Workspace</text>
+        <text x="0" y="22" class="proj-stack">NEXT.JS · FASTAPI</text>
         
-        <line x1="0" y1="46" x2="170" y2="46" stroke="#1e293b" stroke-width="1"/>
+        <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <text x="0" y="60" class="prompt">$</text>
-        <text x="12" y="60" class="cmd">npm run dev</text>
-        <text x="0" y="74" class="prompt">$</text>
-        <text x="12" y="74" class="cmd">routing_engines_active</text>
-        <text x="0" y="88" class="prompt">$</text>
-        <text x="12" y="88" class="cmd">rag_local_vector_sync</text>
+        <text x="0" y="46" class="txt-mono">Self-hosted multi-LLM AI</text>
+        <text x="0" y="58" class="txt-mono">workspace. Custom prompt</text>
+        <text x="0" y="70" class="txt-mono">chain routing, local vector</text>
+        <text x="0" y="82" class="txt-mono">RAG database, cost logs,</text>
+        <text x="0" y="94" class="txt-mono">and Python sandbox environments.</text>
 
-        <line x1="0" y1="98" x2="170" y2="98" stroke="#1e293b" stroke-width="1"/>
+        <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <!-- Details -->
-        <text x="0" y="112" class="p-desc">Self-hosted AI environment.</text>
-        <text x="0" y="124" class="p-desc">Routes across 25+ LLMs,</text>
-        <text x="0" y="136" class="p-desc">features local RAG, usage cost</text>
-        <text x="0" y="148" class="p-desc">telemetry, and model arena.</text>
+        <text x="0" y="120" class="txt-italic">Universal API routing</text>
+        <text x="0" y="132" class="txt-italic">Model battle &amp; Elo stats</text>
         
-        <line x1="0" y1="160" x2="170" y2="160" stroke="#1e293b" stroke-width="1"/>
+        <rect x="0" y="145" width="125" height="5" class="slider-track"/>
+        <rect x="0" y="145" width="100" height="5" class="slider-fill-blue"/>
+        <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#3B82F6" font-weight="bold">80%</text>
 
-        <text x="0" y="174" class="p-sub">FRONT: Next.js, Zustand</text>
-        <text x="0" y="186" class="p-sub">BACK: FastAPI, SQLite, Chroma</text>
-        <text x="0" y="198" class="p-sub">TOOLS: Python Code Sandbox</text>
+        <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <line x1="0" y1="208" x2="170" y2="208" stroke="#1e293b" stroke-width="1"/>
-
-        <!-- Status -->
-        <circle cx="6" cy="218" r="4.5" class="status-pulse-green"/>
-        <text x="18" y="221" class="status-text" fill="#10B981">● ACTIVE DEV</text>
+        <circle cx="5" cy="180" r="4.5" class="pulse-green"/>
+        <text x="16" y="183" class="status-lbl" fill="#10B981">● ACTIVE DEV</text>
       </g>
     </g>
   </a>
 
   <!-- ================= PROJECT 3: DATAFLOW VISUALISER ================= -->
-  <a href="https://github.com/Stewy8506/Repository-Visualiser" target="_blank" class="card-link">
-    <g class="card-g cg-3" transform="translate(434, 42)">
-      <rect width="200" height="268" class="window-bg"/>
-      <path d="M 0 8 A 8 8 0 0 1 8 0 L 192 0 A 8 8 0 0 1 200 8 L 200 24 L 0 24 Z" class="window-header"/>
+  <a href="https://github.com/Stewy8506/Repository-Visualiser" target="_blank" class="proj-link">
+    <g class="widget-group wg-3" transform="translate(430, 42)">
+      <rect width="195" height="275" class="glass-card" fill="url(#cardBg)"/>
       
-      <!-- OS Window Controls -->
-      <circle cx="16" cy="12" r="4" class="btn-red"/>
-      <circle cx="28" cy="12" r="4" class="btn-yellow"/>
-      <circle cx="40" cy="12" r="4" class="btn-green"/>
-      <text x="100" y="15" class="window-title" text-anchor="middle">dataflow-viz</text>
+      <!-- Icon -->
+      <g class="card-icon" transform="translate(15, 15)">
+        <rect width="36" height="36" rx="10" fill="url(#gradRed)"/>
+        <!-- Custom graph graphic details -->
+        <circle cx="12" cy="14" r="3" fill="#ffffff"/>
+        <circle cx="24" cy="14" r="3" fill="#ffffff"/>
+        <circle cx="18" cy="24" r="3" fill="#ffffff"/>
+        <line x1="12" y1="14" x2="24" y2="14" stroke="#ffffff" stroke-width="1.2"/>
+        <line x1="12" y1="14" x2="18" y2="24" stroke="#ffffff" stroke-width="1.2"/>
+        <line x1="24" y1="14" x2="18" y2="24" stroke="#ffffff" stroke-width="1.2"/>
+      </g>
 
-      <!-- Terminal content -->
-      <g transform="translate(15, 42)">
-        <text x="0" y="10" class="p-tag">DESKTOP / COMPILERS</text>
-        <text x="0" y="26" class="p-title">Dataflow</text>
-        <text x="0" y="38" class="p-title">Visualiser</text>
+      <g transform="translate(15, 70)">
+        <text x="0" y="10" class="proj-title">Dataflow Visualiser</text>
+        <text x="0" y="22" class="proj-stack">RUST · TAURI · REACT</text>
         
-        <line x1="0" y1="46" x2="170" y2="46" stroke="#1e293b" stroke-width="1"/>
+        <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <text x="0" y="60" class="prompt">$</text>
-        <text x="12" y="60" class="cmd">cargo tauri dev</text>
-        <text x="0" y="74" class="prompt">$</text>
-        <text x="12" y="74" class="cmd">oxc_ast_index_running</text>
-        <text x="0" y="88" class="prompt">$</text>
-        <text x="12" y="88" class="cmd">simulate_blast_radius</text>
+        <text x="0" y="46" class="txt-mono">High-performance desktop AST</text>
+        <text x="0" y="58" class="txt-mono">dependency graph mapper.</text>
+        <text x="0" y="70" class="txt-mono">Traces local import edges,</text>
+        <text x="0" y="82" class="txt-mono">predicts refactor blast</text>
+        <text x="0" y="94" class="txt-mono">radii with AI refactor tools.</text>
 
-        <line x1="0" y1="98" x2="170" y2="98" stroke="#1e293b" stroke-width="1"/>
+        <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <!-- Details -->
-        <text x="0" y="112" class="p-desc">High-performance desktop tool</text>
-        <text x="0" y="124" class="p-desc">to visualize dependency graphs</text>
-        <text x="0" y="136" class="p-desc">and simulate refactor blast</text>
-        <text x="0" y="148" class="p-desc">radii using local AST indexes.</text>
+        <text x="0" y="120" class="txt-italic">oxc-parser AST parsing</text>
+        <text x="0" y="132" class="txt-italic">2D/3D force canvas</text>
         
-        <line x1="0" y1="160" x2="170" y2="160" stroke="#1e293b" stroke-width="1"/>
+        <rect x="0" y="145" width="125" height="5" class="slider-track"/>
+        <rect x="0" y="145" width="118" height="5" class="slider-fill-green"/>
+        <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#10B981" font-weight="bold">95%</text>
 
-        <text x="0" y="174" class="p-sub">ENGINE: Rust, Tauri v2</text>
-        <text x="0" y="186" class="p-sub">FRONT: React 19, TypeScript</text>
-        <text x="0" y="198" class="p-sub">AST: oxc-parser (Rust-based)</text>
+        <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <line x1="0" y1="208" x2="170" y2="208" stroke="#1e293b" stroke-width="1"/>
-
-        <!-- Status -->
-        <circle cx="6" cy="218" r="4.5" class="status-pulse-orange"/>
-        <text x="18" y="221" class="status-text" fill="#F59E0B">● NEAR RELEASE</text>
+        <circle cx="5" cy="180" r="4.5" class="pulse-orange"/>
+        <text x="16" y="183" class="status-lbl" fill="#F59E0B">● NEAR RELEASE</text>
       </g>
     </g>
   </a>
 
   <!-- ================= PROJECT 4: MOMENTUM TRACKER ================= -->
-  <a href="https://github.com/Stewy8506/RN-Habit-Tracker" target="_blank" class="card-link">
-    <g class="card-g cg-4" transform="translate(646, 42)">
-      <rect width="200" height="268" class="window-bg"/>
-      <path d="M 0 8 A 8 8 0 0 1 8 0 L 192 0 A 8 8 0 0 1 200 8 L 200 24 L 0 24 Z" class="window-header"/>
+  <a href="https://github.com/Stewy8506/RN-Habit-Tracker" target="_blank" class="proj-link">
+    <g class="widget-group wg-4" transform="translate(635, 42)">
+      <rect width="195" height="275" class="glass-card" fill="url(#cardBg)"/>
       
-      <!-- OS Window Controls -->
-      <circle cx="16" cy="12" r="4" class="btn-red"/>
-      <circle cx="28" cy="12" r="4" class="btn-yellow"/>
-      <circle cx="40" cy="12" r="4" class="btn-green"/>
-      <text x="100" y="15" class="window-title" text-anchor="middle">momentum-app</text>
+      <!-- Icon -->
+      <g class="card-icon" transform="translate(15, 15)">
+        <rect width="36" height="36" rx="10" fill="url(#gradPurple)"/>
+        <!-- Custom checkmark flame graphic details -->
+        <path d="M 11 19 L 16 23 L 26 12" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
 
-      <!-- Terminal content -->
-      <g transform="translate(15, 42)">
-        <text x="0" y="10" class="p-tag">MOBILE / STATE</text>
-        <text x="0" y="26" class="p-title">Momentum</text>
-        <text x="0" y="38" class="p-title">Tracker</text>
+      <g transform="translate(15, 70)">
+        <text x="0" y="10" class="proj-title">Momentum Tracker</text>
+        <text x="0" y="22" class="proj-stack">RN · EXPO · ZUSTAND</text>
         
-        <line x1="0" y1="46" x2="170" y2="46" stroke="#1e293b" stroke-width="1"/>
+        <line x1="0" y1="32" x2="165" y2="32" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <text x="0" y="60" class="prompt">$</text>
-        <text x="12" y="60" class="cmd">npx expo start</text>
-        <text x="0" y="74" class="prompt">$</text>
-        <text x="12" y="74" class="cmd">dnd_lock_controller_init</text>
-        <text x="0" y="88" class="prompt">$</text>
-        <text x="12" y="88" class="cmd">sync_firebase_snap_lobby</text>
+        <text x="0" y="46" class="txt-mono">Productivity habit application</text>
+        <text x="0" y="58" class="txt-mono">featuring modern dual-shadow</text>
+        <text x="0" y="70" class="txt-mono">neumorphic designs, focus DND</text>
+        <text x="0" y="82" class="txt-mono">native timers, alarms,</text>
+        <text x="0" y="94" class="txt-mono">and group lobby chats.</text>
 
-        <line x1="0" y1="98" x2="170" y2="98" stroke="#1e293b" stroke-width="1"/>
+        <line x1="0" y1="106" x2="165" y2="106" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <!-- Details -->
-        <text x="0" y="112" class="p-desc">Neumorphic productivity app</text>
-        <text x="0" y="124" class="p-desc">with custom DND modules,</text>
-        <text x="0" y="136" class="p-desc">focus timers, habit heatmaps</text>
-        <text x="0" y="148" class="p-desc">and live social lobbies.</text>
+        <text x="0" y="120" class="txt-italic">Custom DND system module</text>
+        <text x="0" y="132" class="txt-italic">Firestore sync listeners</text>
         
-        <line x1="0" y1="160" x2="170" y2="160" stroke="#1e293b" stroke-width="1"/>
+        <rect x="0" y="145" width="125" height="5" class="slider-track"/>
+        <rect x="0" y="145" width="100" height="5" class="slider-fill-purple"/>
+        <text x="135" y="150" font-family="'JetBrains Mono', monospace" font-size="8" fill="#8B5CF6" font-weight="bold">80%</text>
 
-        <text x="0" y="174" class="p-sub">MOBILE: React Native (v0.81)</text>
-        <text x="0" y="186" class="p-sub">ROUTER: Expo Router v6</text>
-        <text x="0" y="198" class="p-sub">STATE: Zustand, Firebase Auth</text>
+        <line x1="0" y1="165" x2="165" y2="165" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.8"/>
 
-        <line x1="0" y1="208" x2="170" y2="208" stroke="#1e293b" stroke-width="1"/>
-
-        <!-- Status -->
-        <circle cx="6" cy="218" r="4.5" class="status-pulse-green"/>
-        <text x="18" y="221" class="status-text" fill="#10B981">● ACTIVE DEV</text>
+        <circle cx="5" cy="180" r="4.5" class="pulse-green"/>
+        <text x="16" y="183" class="status-lbl" fill="#10B981">● ACTIVE DEV</text>
       </g>
     </g>
   </a>

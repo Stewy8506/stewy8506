@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-030712?style=for-the-badge&logo=linkedin&logoColor=3B82F6&labelColor=030712)](https://www.linkedin.com/in/anv-dev/)&nbsp;&nbsp;[![Instagram](https://img.shields.io/badge/INSTAGRAM-030712?style=for-the-badge&logo=instagram&logoColor=3B82F6&labelColor=030712)](https://www.instagram.com/anv.vibes/)&nbsp;&nbsp;[![Email](https://img.shields.io/badge/EMAIL-030712?style=for-the-badge&logo=gmail&logoColor=3B82F6&labelColor=030712)](mailto:dasanuvab38@gmail.com)&nbsp;&nbsp;[![GitHub](https://img.shields.io/badge/GITHUB-030712?style=for-the-badge&logo=github&logoColor=3B82F6&labelColor=030712)](https://github.com/Stewy8506)
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-020205?style=for-the-badge&logo=linkedin&logoColor=3B82F6&labelColor=020205)](https://www.linkedin.com/in/anv-dev/)&nbsp;&nbsp;[![Instagram](https://img.shields.io/badge/INSTAGRAM-020205?style=for-the-badge&logo=instagram&logoColor=3B82F6&labelColor=020205)](https://www.instagram.com/anv.vibes/)&nbsp;&nbsp;[![Email](https://img.shields.io/badge/EMAIL-020205?style=for-the-badge&logo=gmail&logoColor=3B82F6&labelColor=020205)](mailto:dasanuvab38@gmail.com)&nbsp;&nbsp;[![GitHub](https://img.shields.io/badge/GITHUB-020205?style=for-the-badge&logo=github&logoColor=3B82F6&labelColor=020205)](https://github.com/Stewy8506)
 
 </div>
 
@@ -17,7 +17,7 @@
 <td width="50%" valign="top">
 
 ```yaml
-# anuvab.config.yaml [v4.0]
+# anuvab.config.yaml [v5.0-HUD]
 name: "Anuvab Das"
 role: "Full-Stack & Embedded Systems Developer"
 focus:
@@ -102,7 +102,7 @@ All systems operational.
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=Stewy8506&theme=black-ice&background=030712&border=1f2937&stroke=1f2937&ring=3B82F6&fire=60A5FA&currStreakLabel=3B82F6&sideLabels=4b5563&dates=374151&currStreakNum=ffffff&sideNums=9ca3af"/>
+<img src="https://streak-stats.demolab.com?user=Stewy8506&theme=black-ice&background=020205&border=1f2937&stroke=1f2937&ring=3B82F6&fire=60A5FA&currStreakLabel=3B82F6&sideLabels=4b5563&dates=374151&currStreakNum=ffffff&sideNums=9ca3af"/>
 
 </div>
 
@@ -110,7 +110,7 @@ All systems operational.
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Stewy8506&bg_color=030712&color=3B82F6&line=1e293b&point=3B82F6&area=true&area_color=0f172a&hide_border=false&border_color=1f2937&custom_title=commit+activity" width="96%"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Stewy8506&bg_color=020205&color=3B82F6&line=1e293b&point=3B82F6&area=true&area_color=0f172a&hide_border=false&border_color=1f2937&custom_title=commit+activity" width="96%"/>
 
 </div>
 
