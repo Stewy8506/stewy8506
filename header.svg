@@ -1,7 +1,7 @@
 <svg width="100%" viewBox="0 0 860 240" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap');
+    <style><![CDATA[
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=JetBrains+Mono:wght@400;700&display=swap');
       
       .hud-title {
         font-family: 'Outfit', sans-serif;
@@ -76,7 +76,7 @@
         50% { transform: scale(1) translate(20px, -10px); opacity: 0.22; }
       }
 
-      /* Dial Rotation & Progress */
+      /* Dial Rotation and Progress */
       .dial-track {
         stroke: #1e293b;
         stroke-width: 3.5;
@@ -123,7 +123,7 @@
         0% { transform: translateY(-40px); }
         100% { transform: translateY(280px); }
       }
-    </style>
+    ]]></style>
 
     <!-- Filters for frosted glass & heavy ambient backlights -->
     <filter id="heavyGlow" x="-50%" y="-50%" width="200%" height="200%">
