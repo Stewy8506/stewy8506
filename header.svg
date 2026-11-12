@@ -1,4 +1,4 @@
-<svg width="1000" height="360" viewBox="0 0 1000 360" xmlns="http://www.w3.org/2000/svg">
+<svg width="1000" height="350" viewBox="0 0 1000 350" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .bg {
@@ -9,8 +9,17 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
         font-size: 11px;
         font-weight: 600;
-        letter-spacing: 3.5px;
+        letter-spacing: 3px;
         fill: #8b949e;
+        opacity: 0;
+        animation: fadeIn 0.8s ease forwards 0.1s;
+      }
+      .kicker-right {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        fill: #6e7681;
         opacity: 0;
         animation: fadeIn 0.8s ease forwards 0.1s;
       }
@@ -231,10 +240,11 @@
   </defs>
 
   <!-- Canvas -->
-  <rect width="1000" height="360" class="bg"/>
+  <rect width="1000" height="350" class="bg"/>
 
   <!-- ================= TOP KICKER & HAIRLINE ================= -->
-  <text x="50" y="38" class="kicker">Nº 01 — SWISS MODERNISM 2.0 // SYSTEMS &amp; DIGITAL ARCHITECTURE</text>
+  <text x="50" y="38" class="kicker">SYSTEMS ARCHITECTURE &amp; PHYSICAL COMPUTING</text>
+  <text x="950" y="38" class="kicker-right" text-anchor="end">KOLKATA, INDIA · 22.57° N, 88.36° E</text>
   <line x1="50" y1="52" x2="950" y2="52" class="hairline"/>
 
   <!-- ================= LEFT COLUMN: MASSIVE TYPOGRAPHY ================= -->
@@ -244,11 +254,11 @@
     <text x="0" y="125" class="title">Das<tspan class="dot-red">.</tspan></text>
 
     <!-- Subtitle (Clear, mathematically spaced) -->
-    <text x="0" y="170" class="subtext">Distributed software, physical computing, and real-time audio systems.</text>
-    <text x="0" y="192" class="subtext">Engineering clarity through mathematical precision and restrained design.</text>
+    <text x="0" y="168" class="subtext">Distributed software, physical computing, and real-time audio systems.</text>
+    <text x="0" y="190" class="subtext">Engineering clarity through mathematical precision and restrained design.</text>
 
     <!-- Swiss Editorial CTA Buttons -->
-    <g transform="translate(0, 222)">
+    <g transform="translate(0, 218)">
       <!-- Primary solid button -->
       <a href="https://anvv.tech" target="_blank" class="btn-link" style="cursor: pointer;">
         <rect x="0" y="0" width="165" height="40" class="btn-primary"/>
@@ -266,7 +276,7 @@
   <!-- ================= RIGHT COLUMN: ASYMMETRIC BENTO GRID ================= -->
   <g transform="translate(575, 75)">
     <!-- Main Bento Canvas Frame -->
-    <rect x="0" y="0" width="375" height="262" class="bento-container"/>
+    <rect x="0" y="0" width="375" height="258" class="bento-container"/>
 
     <!-- Top mini blocks -->
     <rect x="14" y="14" width="75" height="42" fill="#161b22"/>
@@ -284,7 +294,7 @@
     <line x1="14" y1="68" x2="361" y2="68" stroke="#21262d" stroke-width="1"/>
 
     <!-- Main Visual Block: Floating 3D ASCII Torus Sculpture -->
-    <g transform="translate(42, 74)">
+    <g transform="translate(42, 72)">
       <g class="ascii-frame f0">
         <text x="0" y="20.0" xml:space="preserve">                                </text>
         <text x="0" y="31.2" xml:space="preserve">                    $$@@@@$     </text>
@@ -560,14 +570,14 @@
     </g>
 
     <!-- Asymmetric Bottom Grid Block -->
-    <g transform="translate(266, 82)">
-      <rect x="0" y="0" width="95" height="74" fill="#161b22"/>
-      <text x="47" y="34" class="bento-tag" text-anchor="middle" fill="#8b949e">GRID</text>
-      <text x="47" y="52" class="bento-tag" text-anchor="middle" fill="#ffffff">12 COLS</text>
+    <g transform="translate(266, 80)">
+      <rect x="0" y="0" width="95" height="72" fill="#161b22"/>
+      <text x="47" y="32" class="bento-tag" text-anchor="middle" fill="#8b949e">CORE</text>
+      <text x="47" y="48" class="bento-tag" text-anchor="middle" fill="#ffffff">LX7 / M4</text>
 
-      <rect x="0" y="86" width="95" height="74" fill="#ff3b30" opacity="0.12"/>
-      <text x="47" y="120" class="bento-tag" text-anchor="middle" fill="#ff3b30">44.1 kHz</text>
-      <text x="47" y="136" class="bento-tag" text-anchor="middle" fill="#ff3b30">REALTIME</text>
+      <rect x="0" y="82" width="95" height="74" fill="#ff3b30" opacity="0.12"/>
+      <text x="47" y="118" class="bento-tag" text-anchor="middle" fill="#ff3b30">44.1 kHz</text>
+      <text x="47" y="134" class="bento-tag" text-anchor="middle" fill="#ff3b30">REALTIME</text>
     </g>
   </g>
 </svg>
