@@ -1,0 +1,83 @@
+<svg width="100%" height="180" viewBox="0 0 1000 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #060709; }
+      .kicker {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        fill: #8b949e;
+      }
+      .col-num {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 22px;
+        font-weight: 900;
+        fill: #ff3333;
+        letter-spacing: -1px;
+      }
+      .col-title {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 800;
+        fill: #ffffff;
+        letter-spacing: 1px;
+      }
+      .col-body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 11.5px;
+        font-weight: 400;
+        fill: #8b949e;
+        line-height: 1.5;
+      }
+      .hairline {
+        stroke: #21262d;
+        stroke-width: 1;
+      }
+    </style>
+  </defs>
+
+  <rect width="1000" height="180" class="bg"/>
+
+  <!-- Top Header Rule -->
+  <text x="50" y="24" class="kicker">DISCIPLINES &amp; CORE ARCHITECTURES</text>
+  <line x1="50" y1="36" x2="950" y2="36" class="hairline"/>
+
+  <!-- Column 1: Hardware -->
+  <g transform="translate(50, 56)">
+    <text x="0" y="22" class="col-num">01</text>
+    <text x="0" y="44" class="col-title">HARDWARE &amp; MCU</text>
+    <text x="0" y="66" class="col-body">ESP32-S3 · STM32 HAL · FreeRTOS</text>
+    <text x="0" y="84" class="col-body">I2S Audio DSP · KiCad 4-Layer PCB</text>
+  </g>
+
+  <line x1="265" y1="56" x2="265" y2="155" class="hairline"/>
+
+  <!-- Column 2: Systems -->
+  <g transform="translate(285, 56)">
+    <text x="0" y="22" class="col-num">02</text>
+    <text x="0" y="44" class="col-title">SYSTEMS &amp; RUST</text>
+    <text x="0" y="66" class="col-body">Rust · C/C++ · Tauri v2 Desktop</text>
+    <text x="0" y="84" class="col-body">oxc-parser AST · WebGL Force Graph</text>
+  </g>
+
+  <line x1="500" y1="56" x2="500" y2="155" class="hairline"/>
+
+  <!-- Column 3: Full-Stack -->
+  <g transform="translate(520, 56)">
+    <text x="0" y="22" class="col-num">03</text>
+    <text x="0" y="44" class="col-title">FULL-STACK CLOUD</text>
+    <text x="0" y="66" class="col-body">TypeScript · React 19 · Next.js</text>
+    <text x="0" y="84" class="col-body">FastAPI · Node.js · PostgreSQL</text>
+  </g>
+
+  <line x1="735" y1="56" x2="735" y2="155" class="hairline"/>
+
+  <!-- Column 4: Vision & AI -->
+  <g transform="translate(755, 56)">
+    <text x="0" y="22" class="col-num">04</text>
+    <text x="0" y="44" class="col-title">VISION &amp; APPLIED AI</text>
+    <text x="0" y="66" class="col-body">YOLOv8 Edge ADAS · Gemini API</text>
+    <text x="0" y="84" class="col-body">Local Vector RAG · 100Hz IMU Fusion</text>
+  </g>
+</svg>

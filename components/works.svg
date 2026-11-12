@@ -1,0 +1,165 @@
+<svg width="100%" height="360" viewBox="0 0 1000 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #060709; }
+      .kicker {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        fill: #8b949e;
+      }
+      .hairline {
+        stroke: #21262d;
+        stroke-width: 1;
+      }
+      
+      .work-link {
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .card-box {
+        fill: #0c0e14;
+        stroke: #21262d;
+        stroke-width: 1;
+        transition: all 0.25s ease;
+      }
+      .work-link:hover .card-box {
+        stroke: #ffffff;
+        fill: #12151f;
+      }
+      
+      .card-title {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        fill: #ffffff;
+      }
+      .dot-red { fill: #ff3333; }
+      
+      .card-desc {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 11.5px;
+        font-weight: 400;
+        line-height: 1.5;
+        fill: #8b949e;
+      }
+      
+      .card-tag {
+        font-family: "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+        font-size: 8.5px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        fill: #71717a;
+      }
+      .tag-pill {
+        fill: #161b22;
+        rx: 3px;
+      }
+    </style>
+  </defs>
+
+  <rect width="1000" height="360" class="bg"/>
+
+  <!-- Top Header Rule -->
+  <text x="50" y="24" class="kicker">Nº 02 — SELECTED WORKS &amp; SYSTEMS</text>
+  <line x1="50" y1="36" x2="950" y2="36" class="hairline"/>
+
+  <!-- ================= ROW 1: ASYMMETRIC PAIR 1 ================= -->
+  <!-- Project 1: Smart Helmet System (Wide Hero Card: 530px) -->
+  <a href="https://github.com/Stewy8506/Smart-Helmet-System" target="_blank" class="work-link">
+    <g transform="translate(50, 52)">
+      <rect width="530" height="135" class="card-box"/>
+      <g transform="translate(24, 28)">
+        <text x="0" y="0" class="card-title">Smart Helmet System<tspan class="dot-red">.</tspan></text>
+        <text x="0" y="24" class="card-desc">Distributed real-time IoT riding safety platform with active noise-cancelling DSP audio,</text>
+        <text x="0" y="42" class="card-desc">100Hz IMU sensor fusion, and YOLOv8 ADAS collision alerting pipeline.</text>
+        
+        <g transform="translate(0, 64)">
+          <rect x="0" y="0" width="70" height="18" class="tag-pill"/>
+          <text x="35" y="12" class="card-tag" text-anchor="middle">ESP32-S3</text>
+
+          <rect x="78" y="0" width="60" height="18" class="tag-pill"/>
+          <text x="108" y="12" class="card-tag" text-anchor="middle">STM32</text>
+
+          <rect x="146" y="0" width="75" height="18" class="tag-pill"/>
+          <text x="183" y="12" class="card-tag" text-anchor="middle">FreeRTOS</text>
+
+          <rect x="229" y="0" width="68" height="18" class="tag-pill"/>
+          <text x="263" y="12" class="card-tag" text-anchor="middle">YOLOv8</text>
+        </g>
+      </g>
+    </g>
+  </a>
+
+  <!-- Project 2: AI Workspace (350px) -->
+  <a href="https://github.com/Stewy8506/AI-App" target="_blank" class="work-link">
+    <g transform="translate(600, 52)">
+      <rect width="350" height="135" class="card-box"/>
+      <g transform="translate(24, 28)">
+        <text x="0" y="0" class="card-title">AI Workspace<tspan class="dot-red">.</tspan></text>
+        <text x="0" y="24" class="card-desc">Self-hosted multi-LLM platform featuring custom tool routing,</text>
+        <text x="0" y="42" class="card-desc">local vector RAG indexing, and Python execution sandboxes.</text>
+
+        <g transform="translate(0, 64)">
+          <rect x="0" y="0" width="65" height="18" class="tag-pill"/>
+          <text x="32" y="12" class="card-tag" text-anchor="middle">Next.js</text>
+
+          <rect x="73" y="0" width="60" height="18" class="tag-pill"/>
+          <text x="103" y="12" class="card-tag" text-anchor="middle">FastAPI</text>
+
+          <rect x="141" y="0" width="75" height="18" class="tag-pill"/>
+          <text x="178" y="12" class="card-tag" text-anchor="middle">ChromaDB</text>
+        </g>
+      </g>
+    </g>
+  </a>
+
+  <!-- ================= ROW 2: ASYMMETRIC PAIR 2 ================= -->
+  <!-- Project 3: Repository Visualiser (420px) -->
+  <a href="https://github.com/Stewy8506/Repository-Visualiser" target="_blank" class="work-link">
+    <g transform="translate(50, 205)">
+      <rect width="420" height="135" class="card-box"/>
+      <g transform="translate(24, 28)">
+        <text x="0" y="0" class="card-title">Repository Visualiser<tspan class="dot-red">.</tspan></text>
+        <text x="0" y="24" class="card-desc">High-throughput desktop AST dependency graph engine.</text>
+        <text x="0" y="42" class="card-desc">Traces local import blast radii on a 2D/3D force canvas.</text>
+
+        <g transform="translate(0, 64)">
+          <rect x="0" y="0" width="48" height="18" class="tag-pill"/>
+          <text x="24" y="12" class="card-tag" text-anchor="middle">Rust</text>
+
+          <rect x="56" y="0" width="64" height="18" class="tag-pill"/>
+          <text x="88" y="12" class="card-tag" text-anchor="middle">Tauri v2</text>
+
+          <rect x="128" y="0" width="78" height="18" class="tag-pill"/>
+          <text x="167" y="12" class="card-tag" text-anchor="middle">oxc-parser</text>
+        </g>
+      </g>
+    </g>
+  </a>
+
+  <!-- Project 4: Momentum Tracker (460px) -->
+  <a href="https://github.com/Stewy8506/RN-Habit-Tracker" target="_blank" class="work-link">
+    <g transform="translate(490, 205)">
+      <rect width="460" height="135" class="card-box"/>
+      <g transform="translate(24, 28)">
+        <text x="0" y="0" class="card-title">Momentum Tracker<tspan class="dot-red">.</tspan></text>
+        <text x="0" y="24" class="card-desc">Productivity habit application featuring custom native DND timers,</text>
+        <text x="0" y="42" class="card-desc">tactile neumorphic surfaces, and real-time Firestore synchronization.</text>
+
+        <g transform="translate(0, 64)">
+          <rect x="0" y="0" width="90" height="18" class="tag-pill"/>
+          <text x="45" y="12" class="card-tag" text-anchor="middle">React Native</text>
+
+          <rect x="98" y="0" width="48" height="18" class="tag-pill"/>
+          <text x="122" y="12" class="card-tag" text-anchor="middle">Expo</text>
+
+          <rect x="154" y="0" width="68" height="18" class="tag-pill"/>
+          <text x="188" y="12" class="card-tag" text-anchor="middle">Firestore</text>
+        </g>
+      </g>
+    </g>
+  </a>
+</svg>
